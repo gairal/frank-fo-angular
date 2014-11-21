@@ -1,0 +1,70 @@
+/* ==============================util functions=================================== */
+@mixin gradient-top-down($bgcolor, $startcolor, $endcolor, $img:"") {
+    background-color: $bgcolor $img; 
+    @if $img == "" {
+        background-image: -webkit-gradient(linear, left top, left bottom, from($startcolor), to($endcolor));
+        background-image: -webkit-linear-gradient(top, $startcolor, $endcolor);
+        background-image: -moz-linear-gradient(top, $startcolor, $endcolor);
+        background-image: -ms-linear-gradient(top, $startcolor, $endcolor);
+        background-image: linear-gradient(to bottom, $startcolor, $endcolor);
+    } @else {
+        background-image: url($img),
+            -webkit-gradient(linear, left top, left bottom, from($startcolor), to($endcolor));
+        background-image: url($img),
+            -webkit-linear-gradient(top, $startcolor, $endcolor);
+        background-image: url($img),
+            -moz-linear-gradient(top, $startcolor, $endcolor);
+        background-image: url($img),
+            -ms-linear-gradient(top, $startcolor, $endcolor);
+        background-image: url($img),
+            linear-gradient(to bottom, $startcolor, $endcolor);
+    }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startcolor}',endColorstr='#{$endcolor}',GradientType=0);
+}
+
+@mixin placeholder-color($color, $errorcolor) {
+    &::-webkit-input-placeholder {color: $color;}
+
+    @if $errorcolor != "" {
+        &.error::-webkit-input-placeholder {color: $errorcolor;}
+    }
+    &:-moz-placeholder {color: $color;opacity:  1;}
+    @if $errorcolor != "" {
+        &.error:-moz-placeholder {color: $errorcolor;opacity:  1;}
+    }
+    &::-moz-placeholder {color: $color;opacity:  1;}
+    @if $errorcolor != "" {
+        &.error::-moz-placeholder {color: $errorcolor;opacity:  1;}
+    }
+    &:-ms-input-placeholder {color: $color;}
+    @if $errorcolor != "" {
+        &.error:-ms-input-placeholder {color: $errorcolor;}
+    }
+}
+
+@mixin box-shadow($h, $v, $blur, $spread, $color, $inset: "") {
+    @if $inset == "" {
+        -moz-box-shadow:    $h $v $blur $spread $color ;
+        -webkit-box-shadow: $h $v $blur $spread $color ;
+        box-shadow:         $h $v $blur $spread $color ;
+    } @else {
+        -moz-box-shadow:    $h $v $blur $spread $color $inset ;
+        -webkit-box-shadow: $h $v $blur $spread $color $inset ;
+        box-shadow:         $h $v $blur $spread $color $inset ;
+    }
+}
+
+@mixin anchor($color, $hovercolor, $decoration: "", $hoverdecoration: "") {
+    a {
+        color: $color;
+        @if $decoration != "" {
+            text-decoration: $decoration;
+        }
+        &:hover, &:active, &:focus, &:visited {
+            color: $hovercolor!important;
+            @if $hoverdecoration != "" {
+                text-decoration: $hoverdecoration;
+            }
+        }
+    }
+}

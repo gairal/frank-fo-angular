@@ -1,0 +1,10 @@
+@@include('tmpl/header.tmpl', {
+    "title": "homepage",
+    "js": ""
+})
+
+<div ng-view></div>
+
+@@include('tmpl/footer.tmpl', {
+    "internalscript": "Gairal.init();"
+})
