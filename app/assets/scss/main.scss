@@ -2,9 +2,9 @@
 @import 'common/_variables';
 
 /* ==============================core=================================== */
-/*body{
-    background-color: $background-color;
-    color: $font-color;
+body{
+    //background-color: $background-color;
+    //color: $font-color;
     font-family: opensans-regular;
 }
 a{
@@ -12,6 +12,13 @@ a{
     &:hover, &:active, &:focus{
         text-decoration: underline;
     }
-}*/
+}
+
+footer {
+    font-size: 10px;
+    .footer-info div{
+        padding: 10px;
+    }
+}
 
 /* ==============================specific code=================================== */

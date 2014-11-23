@@ -29,27 +29,34 @@
         <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png" />
         <!-- build:css assets/css/gairal.min.css -->
         <link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.min.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/angular-material/themes/grey-theme.css">
+        <link rel="stylesheet" type="text/css" href="vendor/angular-material/themes/blue-grey-theme.css">
         <link rel="stylesheet" href="assets/css/main.css" />
 
 
         <!-- endbuild -->
         @@js
     </head>
-    <body ng-app="Gairal">
+    <body ng-app="Gairal" md-theme="blue-grey">
         <header>
-            <div ng-controller="HeaderCtrl" layout="column" layout-padding>
-                <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-                <h4>test</h4>
+            <nav ng-controller="HeaderCtrl">
                 <md-tabs md-selected="data.selectedIndex">
-                    <md-tab id="tab1" aria-controls="tab1-content">
-                        Home
+                    <md-tab id="experience" aria-controls="experience-content">
+                        Experience
                     </md-tab>
-                    <md-tab id="tab3" aria-controls="tab3-content">
-                        Account
+                    <md-tab id="skill" aria-controls="skill-content">
+                        Skills
+                    </md-tab>
+                    <md-tab id="motivation" aria-controls="motivation-content">
+                        Motivation
+                    </md-tab>
+                    <md-tab id="education" aria-controls="education-content">
+                        Education
+                    </md-tab>
+                    <md-tab id="interest" aria-controls="interest-content">
+                        Interests
                     </md-tab>
                 </md-tabs>
-            </div>
+            </nav>
         </header>
 
         <!-- START MAIN CONTENT -->

@@ -4,9 +4,10 @@
 
     var API_HOST       = '@@apiUrl',
         APP_VERSION    = '@@appVersion',
+        STATIC_HOST    = '@@staticUrl',
         API_PATH       = '/api/v1/';
 
-    angular.module('wecab.config', [])
+    angular.module('gairal.config', [])
 
     .constant('APP_VERSION', APP_VERSION)
 

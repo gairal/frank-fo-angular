@@ -23,12 +23,15 @@ module.exports = function(grunt) {
   switch(env) {
     case 'dev':
         grunt.config.set('apiUrl', 'http://localhost:8000/');
+        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
         break;
     case 'prod':
         grunt.config.set('apiUrl', 'https://api-gairal.herokuapp.com/');
+        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
         break;
     default:
         grunt.config.set('apiUrl', 'http://localhost:8000/');
+        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
         break;
   }
 
@@ -61,6 +64,7 @@ module.exports = function(grunt) {
         options: {
           globals: {
             apiUrl: '<%= apiUrl %>',
+            statucUrl: '<%= staticUrl %>',
             appVersion: '<%= pkg.version %>',
           },
         },

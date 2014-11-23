@@ -45,21 +45,12 @@ module.exports = {
 
     vendor: {
         js: [
-            '<%= dir.vendor %>/angular/angular.min.js',
-            '<%= dir.vendor %>/angular/angular.min.js.map',
-            '<%= dir.vendor %>/angular-route/angular-route.min.js',
-            '<%= dir.vendor %>/angular-route/angular-route.min.js.map',
-            '<%= dir.vendor %>/angular-aria/angular-aria.min.js',
-            '<%= dir.vendor %>/angular-aria/angular-aria.min.js.map',
-            '<%= dir.vendor %>/angular-animate/angular-animate.min.js',
-            '<%= dir.vendor %>/angular-animate/angular-animate.min.js.map',
-            '<%= dir.vendor %>/hammerjs/hammer.min.js',
-            '<%= dir.vendor %>/hammerjs/hammer.min.map',
-            '<%= dir.vendor %>/angular-material/angular-material.min.js'
+            '<%= dir.vendor %>/hammerjs/hammer.js',
+            '<%= dir.vendor %>/angular-material/angular-material.js'
         ],
         css: [
             '<%= dir.vendor %>/angular-material/angular-material.min.css',
-            '<%= dir.vendor %>/angular-material/themes/grey-theme.css'
+            '<%= dir.vendor %>/angular-material/themes/blue-grey-theme.css'
         ],
         assets: [
         ]
