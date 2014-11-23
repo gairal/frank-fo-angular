@@ -1,13 +1,13 @@
-'use strict';
-
 (function() {
+    'use strict';
 
     var API_HOST       = '@@apiUrl',
         APP_VERSION    = '@@appVersion',
         STATIC_HOST    = '@@staticUrl',
-        API_PATH       = '/api/v1/';
+        STATIC_IMG_PATH    = '/img/',
+        API_PATH       = '/';
 
-    angular.module('gairal.config', [])
+    angular.module('Gairal.config', [])
 
     .constant('APP_VERSION', APP_VERSION)
 
@@ -23,7 +23,6 @@
      * see HostConfigSolver
      */
     .constant('HostConfig', {
-        API_URL:        API_HOST + API_PATH,
-        PAYMENT_HOST:   API_HOST
+        API_URL:        API_HOST + API_PATH
     });
 })();

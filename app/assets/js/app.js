@@ -1,13 +1,23 @@
 // Declare app level module which depends on filters, and services
 angular.module('Gairal', [
-  'Gairal.controllers',
+  'Gairal.config',
   'Gairal.services',
-  'ngRoute'
-]).
+  'Gairal.controllers',
+  'Gairal.directives',
+  'Gairal.filters',
+  'ngRoute',
+  'ngMaterial'
+]);
+angular.module('Gairal.services', ['Gairal.config']);
+angular.module('Gairal.controllers', ['ngMaterial']);
+angular.module('Gairal.directives', []);
+angular.module('Gairal.filters', []);
+
+angular.module('Gairal').
 config(['$routeProvider', function($routeProvider) {
     'use strict';
-  $routeProvider.
-    when('/hp', {templateUrl: 'partials/hp.html', controller: 'HeaderCtrl'}).
-    when('/account', {templateUrl: 'partials/account.html', controller: 'HeaderCtrl'}).
-    otherwise({redirectTo: '/hp'});
+  /*$routeProvider.
+    when('/experience', {templateUrl: 'partials/experience.html', controller: 'experienceCtrl'}).
+    when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
+    otherwise({redirectTo: '/experience'});*/
 }]);

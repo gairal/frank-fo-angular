@@ -1,16 +1,15 @@
-/* Services */
-
-angular.module('Gairal.services', [])
-  .factory('gairalAPIservice', function($http) {
+(function() {
     'use strict';
-    var gairalAPI = {};
+  angular.module('Gairal.services')
+    .factory('gairalAPIservice', ['$http', 'HostConfig', function($http, HostConfig) {
+      var gairalAPI = {};
 
-    gairalAPI.getMessage = function(message) {
-      return $http({
-        method: 'JSONP',
-        url: 'http://echo.jsontest.com/message/' + message + '?callback=JSON_CALLBACK'
-      });
-    };
+      gairalAPI.getSkills = function() {
+        return $http({
+          url: HostConfig.API_URL + '/skills/?format=json'
+        });
+      };
 
-    return gairalAPI;
-  });
+      return gairalAPI;
+    }]);
+})();

@@ -34,29 +34,55 @@
 
 
         <!-- endbuild -->
-        @@js
     </head>
     <body ng-app="Gairal" md-theme="blue-grey">
-        <header>
-            <nav ng-controller="HeaderCtrl">
-                <md-tabs md-selected="data.selectedIndex">
-                    <md-tab id="experience" aria-controls="experience-content">
+        <header ng-controller="NavigationCtrl">
+            <nav>
+                <md-tabs md-selected="selectedIndex">
+                    <md-tab id="experience" aria-controls="experience-content" md-on-select="announceSelected(0)">
                         Experience
                     </md-tab>
-                    <md-tab id="skill" aria-controls="skill-content">
+                    <md-tab id="skill" aria-controls="skill-content" md-on-select="announceSelected(0)">
                         Skills
                     </md-tab>
-                    <md-tab id="motivation" aria-controls="motivation-content">
+                    <md-tab id="motivation" aria-controls="motivation-content" md-on-select="announceSelected(0)">
                         Motivation
                     </md-tab>
-                    <md-tab id="education" aria-controls="education-content">
+                    <md-tab id="education" aria-controls="education-content" md-on-select="announceSelected(0)">
                         Education
                     </md-tab>
-                    <md-tab id="interest" aria-controls="interest-content">
+                    <md-tab id="interest" aria-controls="interest-content" md-on-select="announceSelected(0)">
                         Interests
                     </md-tab>
                 </md-tabs>
             </nav>
+            <ng-switch on="selectedIndex" class="tabpanel-container">
+                <div role="tabpanel" id="experience-content" aria-labelledby="experience" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+                    Experienced
+
+                    {{selectedIndex}}
+                </div>
+                <div role="tabpanel" id="skill-content" aria-labelledby="skill" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
+                    Skills
+                    {{selectedIndex}}
+                </div>
+                <div role="tabpanel" id="motivation-content" aria-labelledby="motivation" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+                    {{selectedIndex}}
+                    @@include('motivation.tmpl')
+                </div>
+                <div role="tabpanel" id="education-content" aria-labelledby="education" ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()">
+
+                    {{selectedIndex}}
+                    Educations
+                </div>
+                <div role="tabpanel" id="interest-content" aria-labelledby="interest" ng-switch-when="4" md-swipe-left="next()" md-swipe-right="previous()">
+
+                    {{selectedIndex}}
+                    Interests
+                </div>
+            </ng-switch>
+
+            {{greeting}}
         </header>
 
         <!-- START MAIN CONTENT -->

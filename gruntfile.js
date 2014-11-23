@@ -16,25 +16,6 @@ module.exports = function(grunt) {
    */
   var userConfig = require('./build.config.js');
 
-  /**
-   * Options
-   */
-  var env = grunt.option('env') || 'local';
-  switch(env) {
-    case 'dev':
-        grunt.config.set('apiUrl', 'http://localhost:8000/');
-        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
-        break;
-    case 'prod':
-        grunt.config.set('apiUrl', 'https://api-gairal.herokuapp.com/');
-        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
-        break;
-    default:
-        grunt.config.set('apiUrl', 'http://localhost:8000/');
-        grunt.config.set('staticUrl', 'http://static.gairal.com/img/');
-        break;
-  }
-
   // Project configuration.
   /**
    * Clean build and compile directories by removing folders
@@ -64,7 +45,7 @@ module.exports = function(grunt) {
         options: {
           globals: {
             apiUrl: '<%= apiUrl %>',
-            statucUrl: '<%= staticUrl %>',
+            staticUrl: '<%= staticUrl %>',
             appVersion: '<%= pkg.version %>',
           },
         },
@@ -72,6 +53,12 @@ module.exports = function(grunt) {
           {
             cwd: '<%= dir.app %>/',
             src: '<%= app.html %>', 
+            dest: '<%= dir.build %>',
+            expand: true
+          },
+          {
+            cwd: '<%= dir.app %>/',
+            src: '<%= app.js %>', 
             dest: '<%= dir.build %>',
             expand: true
           }
@@ -111,7 +98,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= dir.app %>/', 
                     src: [
-                      '<%= app.js %>',
                       '<%= app.fonts %>',
                       '<%= app.images %>'
                     ],
@@ -127,7 +113,7 @@ module.exports = function(grunt) {
                     ],
                     dest: '<%= dir.build %>/'
                 },
-            ]
+            ],
         },
         compile: {
             files: [
@@ -293,7 +279,7 @@ module.exports = function(grunt) {
     connect: {
       build: {
         options: {
-          hostname: 'localhost',
+          hostname: '0.0.0.0',
           port: 9000,
           base: '<%= dir.build %>',
           open: false,
@@ -361,12 +347,31 @@ module.exports = function(grunt) {
       },
       js: {
           files: ['app/<%= app.js %>'],
-          tasks: ['copy:build', 'jshint']
+          tasks: ['includereplace', 'jshint']
       }
     }
 
   };
   grunt.initConfig(grunt.util._.extend(taskConfig, userConfig));
+
+  /**
+   * Options
+   */
+  var env = grunt.option('env') || 'local';
+  switch(env) {
+    case 'dev':
+        grunt.config.set('apiUrl', 'http://localhost:8000');
+        grunt.config.set('staticUrl', 'http://static.gairal.com');
+        break;
+    case 'prod':
+        grunt.config.set('apiUrl', 'https://api-gairal.herokuapp.com');
+        grunt.config.set('staticUrl', 'http://static.gairal.com');
+        break;
+    default:
+        grunt.config.set('apiUrl', 'https://api-gairal.herokuapp.com');
+        grunt.config.set('staticUrl', 'http://static.gairal.com');
+        break;
+  }
 
   //store git revistion when callinh git-describe
   grunt.event.once('git-describe', function (rev) {
@@ -397,7 +402,7 @@ module.exports = function(grunt) {
       'clean',
       'includereplace',
       'sass',
-      'copy:build',
+      'copy:build'
   ]);
   grunt.registerTask('compile', [
       'build',
