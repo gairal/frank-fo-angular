@@ -5,7 +5,7 @@
         APP_VERSION    = '@@appVersion',
         STATIC_HOST    = '@@staticUrl',
         STATIC_IMG_PATH    = '/img/',
-        API_PATH       = '/';
+        API_PATH       = '';
 
     angular.module('Gairal.config', [])
 

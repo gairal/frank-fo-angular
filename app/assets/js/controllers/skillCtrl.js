@@ -3,10 +3,10 @@
 
     angular.module('Gairal.controllers')
       .controller('SkillCtrl', function( $scope, gairalAPIservice) {
-          $scope.skills = '';
+          $scope.categories = '';
 
           gairalAPIservice.getSkills().success(function (response) {
-              $scope.skills = response;
+              $scope.categories = response;
           });
         
       });

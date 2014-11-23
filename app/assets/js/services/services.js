@@ -1,15 +1,22 @@
 (function() {
     'use strict';
-  angular.module('Gairal.services')
+    angular.module('Gairal.services')
     .factory('gairalAPIservice', ['$http', 'HostConfig', function($http, HostConfig) {
-      var gairalAPI = {};
+        var gairalAPI = {},
+            format = '/.json';
 
-      gairalAPI.getSkills = function() {
-        return $http({
-          url: HostConfig.API_URL + '/skills/?format=json'
-        });
-      };
+        gairalAPI.getExperiences = function() {
+            return $http({
+                url: HostConfig.API_URL + '/experiences' + format
+            });
+        };
 
-      return gairalAPI;
+        gairalAPI.getSkills = function() {
+            return $http({
+                url: HostConfig.API_URL + '/categories' + format
+            });
+        };
+
+        return gairalAPI;
     }]);
 })();

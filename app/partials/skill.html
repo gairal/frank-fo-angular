@@ -1,0 +1,18 @@
+<div ng-controller="SkillCtrl">
+<section ng-repeat="cat in categories">
+    <md-subheader class="md-primary">{{cat.name}}</md-subheader>
+    <md-list>
+        <md-item ng-repeat="skill in cat.skills">
+            <md-item-content>
+                <div class="md-tile-content">
+                    <h3>{{skill.name}}</h3>
+                    <h4>{{skill.description}}</h4>
+                    <p>
+                        <md-progress-linear md-mode="determinate" value="{{skill.level}}"></md-progress-linear>
+                    </p>
+                </div>
+            </md-item-content>
+        </md-item>
+    </md-list>
+</section>
+</div>

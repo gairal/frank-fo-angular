@@ -37,12 +37,17 @@
     </head>
     <body ng-app="Gairal" md-theme="blue-grey">
         <header ng-controller="NavigationCtrl">
+        <md-toolbar class="md-toolbar-tools" md-scroll-shrink>
+          <h2>
+            <span>Frank Gairal - Technical Project Manager</span>
+          </h2>
+        </md-toolbar>
             <nav>
                 <md-tabs md-selected="selectedIndex">
                     <md-tab id="experience" aria-controls="experience-content" md-on-select="announceSelected(0)">
                         Experience
                     </md-tab>
-                    <md-tab id="skill" aria-controls="skill-content" md-on-select="announceSelected(0)">
+                    <md-tab id="skill" aria-controls="skill-content" ng-click="showSkills($event)">
                         Skills
                     </md-tab>
                     <md-tab id="motivation" aria-controls="motivation-content" md-on-select="announceSelected(0)">
@@ -53,6 +58,9 @@
                     </md-tab>
                     <md-tab id="interest" aria-controls="interest-content" md-on-select="announceSelected(0)">
                         Interests
+                    </md-tab>
+                    <md-tab id="info" aria-controls="info-content" ng-click="showInfo($event)">
+                        Info
                     </md-tab>
                 </md-tabs>
             </nav>
@@ -81,8 +89,6 @@
                     Interests
                 </div>
             </ng-switch>
-
-            {{greeting}}
         </header>
 
         <!-- START MAIN CONTENT -->
