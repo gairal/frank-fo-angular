@@ -5,11 +5,10 @@ angular.module('Gairal', [
   'Gairal.controllers',
   'Gairal.directives',
   'Gairal.filters',
-  'ngRoute',
-  'ngMaterial'
+  'ngRoute'
 ]);
 angular.module('Gairal.services', ['Gairal.config']);
-angular.module('Gairal.controllers', ['ngMaterial']);
+angular.module('Gairal.controllers', []);
 angular.module('Gairal.directives', []);
 angular.module('Gairal.filters', []);
 

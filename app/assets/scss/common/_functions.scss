@@ -69,7 +69,7 @@
     }
 }
 
-@each $font-face in opensans-regular {
+@each $font-face in  {
     @font-face {
           font-family: '#{$font-face}'; font-style: normal; font-weight: normal;
           src: url('../fonts/#{$font-face}.eot');

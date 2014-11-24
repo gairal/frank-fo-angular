@@ -45,14 +45,11 @@ module.exports = {
 
     vendor: {
         js: [
-            '<%= dir.vendor %>/hammerjs/hammer.js',
-            '<%= dir.vendor %>/angular-material/angular-material.js'
+            '<%= dir.vendor %>/jquery/dist/jquery.min.js',
+            '<%= dir.vendor %>/jquery/dist/jquery.min.map',
+            '<%= dir.vendor %>/bootstrap-sass-official/assets/javascripts/bootstrap.js',
         ],
-        css: [
-            '<%= dir.vendor %>/angular-material/angular-material.min.css',
-            '<%= dir.vendor %>/angular-material/themes/blue-grey-theme.css'
-        ],
-        assets: [
-        ]
+        css: [],
+        assets: []
     }
 };

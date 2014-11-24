@@ -5,6 +5,12 @@
         var gairalAPI = {},
             format = '/.json';
 
+        gairalAPI.get = function(path) {
+            return $http({
+                url: HostConfig.API_URL + '/' + path + format
+            });
+        };
+
         gairalAPI.getExperiences = function() {
             return $http({
                 url: HostConfig.API_URL + '/experiences' + format
@@ -12,9 +18,7 @@
         };
 
         gairalAPI.getSkills = function() {
-            return $http({
-                url: HostConfig.API_URL + '/categories' + format
-            });
+            return gairalAPI.get('categories');
         };
 
         return gairalAPI;

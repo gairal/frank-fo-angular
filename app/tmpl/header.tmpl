@@ -28,68 +28,9 @@
         <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH3QEDAB0Mu3sDOAAAAJNJREFUSMdjjC3OZqAZmMo4i4mmpjMwMDDR1HRaWQA3nSYWIJtOfQvQTGdgYGDBVNRWX0K2BR8Z0PXSMBWNWjBiLGAkvrBDS75VjT2YqZ6aPiDG9NFIpqYFRIY4JiC2sMMsxT7W3cJUxt+kNhrJoxZQHbAQk9So6QOyMxRRFlDddBQLaGE6wgIamQ61gHamMzAwAABxTx/OYLAzeAAAAABJRU5ErkJggg==" type="image/x-icon">
         <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png" />
         <!-- build:css assets/css/gairal.min.css -->
-        <link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.min.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/angular-material/themes/blue-grey-theme.css">
         <link rel="stylesheet" href="assets/css/main.css" />
-
-
         <!-- endbuild -->
     </head>
-    <body ng-app="Gairal" md-theme="blue-grey">
-        <header ng-controller="NavigationCtrl">
-        <md-toolbar class="md-toolbar-tools" md-scroll-shrink>
-          <h2>
-            <span>Frank Gairal - Technical Project Manager</span>
-          </h2>
-        </md-toolbar>
-            <nav>
-                <md-tabs md-selected="selectedIndex">
-                    <md-tab id="experience" aria-controls="experience-content" md-on-select="announceSelected(0)">
-                        Experience
-                    </md-tab>
-                    <md-tab id="skill" aria-controls="skill-content" ng-click="showSkills($event)">
-                        Skills
-                    </md-tab>
-                    <md-tab id="motivation" aria-controls="motivation-content" md-on-select="announceSelected(0)">
-                        Motivation
-                    </md-tab>
-                    <md-tab id="education" aria-controls="education-content" md-on-select="announceSelected(0)">
-                        Education
-                    </md-tab>
-                    <md-tab id="interest" aria-controls="interest-content" md-on-select="announceSelected(0)">
-                        Interests
-                    </md-tab>
-                    <md-tab id="info" aria-controls="info-content" ng-click="showInfo($event)">
-                        Info
-                    </md-tab>
-                </md-tabs>
-            </nav>
-            <ng-switch on="selectedIndex" class="tabpanel-container">
-                <div role="tabpanel" id="experience-content" aria-labelledby="experience" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
-                    Experienced
-
-                    {{selectedIndex}}
-                </div>
-                <div role="tabpanel" id="skill-content" aria-labelledby="skill" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
-                    Skills
-                    {{selectedIndex}}
-                </div>
-                <div role="tabpanel" id="motivation-content" aria-labelledby="motivation" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
-                    {{selectedIndex}}
-                    @@include('motivation.tmpl')
-                </div>
-                <div role="tabpanel" id="education-content" aria-labelledby="education" ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()">
-
-                    {{selectedIndex}}
-                    Educations
-                </div>
-                <div role="tabpanel" id="interest-content" aria-labelledby="interest" ng-switch-when="4" md-swipe-left="next()" md-swipe-right="previous()">
-
-                    {{selectedIndex}}
-                    Interests
-                </div>
-            </ng-switch>
-        </header>
-
+    <body ng-app="Gairal">
         <!-- START MAIN CONTENT -->
-        <div class="content" layout="column">
+        <div class="content" ng-controller="NavigationCtrl">

@@ -1,10 +1,12 @@
 Starter build template for Gairal F-E Development
 
-###Tools
+###Todo
 - Sprites
 - Jasmine
 - Express
 - Google Analytics
+- reintegrate AngularMaterial when working
+- Select only needed componenet in Bootstrap And Jquery
 
 
 ###Install
