@@ -1,0 +1,18 @@
+<div>
+<section ng-repeat="cat in categories">
+    <md-subheader class="md-primary">{{cat.name}}</md-subheader>
+    <md-list>
+        <md-item ng-repeat="interest in cat.interests">
+            <md-item-content>
+                <div class="md-tile-content">
+                    <h3>{{interest.name}}</h3>
+                    <h4>{{interest.description}}</h4>
+                    <p>
+                        <md-progress-linear md-mode="determinate" value="{{interest.level}}"></md-progress-linear>
+                    </p>
+                </div>
+            </md-item-content>
+        </md-item>
+    </md-list>
+</section>
+</div>

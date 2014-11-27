@@ -1,22 +1,27 @@
-// Declare app level module which depends on filters, and services
-angular.module('Gairal', [
-  'Gairal.config',
-  'Gairal.services',
-  'Gairal.controllers',
-  'Gairal.directives',
-  'Gairal.filters',
-  'ngRoute'
-]);
-angular.module('Gairal.services', ['Gairal.config']);
-angular.module('Gairal.controllers', []);
-angular.module('Gairal.directives', []);
-angular.module('Gairal.filters', []);
-
-angular.module('Gairal').
-config(['$routeProvider', function($routeProvider) {
+(function() {
     'use strict';
-  /*$routeProvider.
-    when('/experience', {templateUrl: 'partials/experience.html', controller: 'experienceCtrl'}).
-    when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
-    otherwise({redirectTo: '/experience'});*/
-}]);
+    angular.module('Gairal', [
+        'Gairal.config',
+        'Gairal.services',
+        'Gairal.controllers',
+        'Gairal.directives',
+        'Gairal.filters',
+        'ngRoute',
+        'ui.bootstrap'
+    ]);
+    angular.module('Gairal.services', []);
+    angular.module('Gairal.controllers', []);
+    angular.module('Gairal.directives', []);
+    angular.module('Gairal.filters', []);
+
+    angular.module('Gairal').
+        config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+                when('/experience', {templateUrl: 'partials/experience.html', controller: 'ExperienceCtrl'}).
+                when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
+                when('/motivation', {templateUrl: 'partials/motivation.html', controller: 'MotivationCtrl'}).
+                when('/education', {templateUrl: 'partials/education.html', controller: 'EducationCtrl'}).
+                when('/interest', {templateUrl: 'partials/interest.html', controller: 'InterestCtrl'}).
+            otherwise({redirectTo: '/experience'});
+        }]);
+})();

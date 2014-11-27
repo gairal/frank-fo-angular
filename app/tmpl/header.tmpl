@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js" ng-app="Gairal" ng-controller="GairalCtrl"> <!--<![endif]-->
     <head>
 
         <!--[if lt IE 8]>
@@ -31,6 +31,9 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <!-- endbuild -->
     </head>
-    <body ng-app="Gairal">
+    <body>
+        <header>
+            @@include('nav.tmpl')
+        </header>
         <!-- START MAIN CONTENT -->
-        <div class="content" ng-controller="NavigationCtrl">
+        <div class="container-fluid content">

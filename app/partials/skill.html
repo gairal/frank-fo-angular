@@ -1,18 +1,12 @@
-<div ng-controller="SkillCtrl">
-<section ng-repeat="cat in categories">
-    <md-subheader class="md-primary">{{cat.name}}</md-subheader>
-    <md-list>
-        <md-item ng-repeat="skill in cat.skills">
-            <md-item-content>
-                <div class="md-tile-content">
-                    <h3>{{skill.name}}</h3>
-                    <h4>{{skill.description}}</h4>
-                    <p>
-                        <md-progress-linear md-mode="determinate" value="{{skill.level}}"></md-progress-linear>
-                    </p>
-                </div>
-            </md-item-content>
-        </md-item>
-    </md-list>
-</section>
+<div>
+    <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="cat in categories" heading="{{cat.name}}">
+            <ul>
+                <li  ng-repeat="skill in cat.skills">
+                    {{skill.name}} - {{skill.description}}
+                    <progressbar ng-if="skill.level" value="skill.level" class="progress-striped active">
+                </li>
+            </ul>
+        </accordion-group>
+    </accordion>
 </div>

@@ -45,11 +45,14 @@ module.exports = {
 
     vendor: {
         js: [
-            '<%= dir.vendor %>/jquery/dist/jquery.min.js',
-            '<%= dir.vendor %>/jquery/dist/jquery.min.map',
-            '<%= dir.vendor %>/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+            '<%= dir.vendor %>/angular-bootstrap/ui-bootstrap.js'
         ],
         css: [],
-        assets: []
+        assets: [
+            '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
+            '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
+            '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf',
+            '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff'
+        ]
     }
 };

@@ -1,0 +1,31 @@
+<!-- <tabset>
+    <tab ng-repeat="exp in experiences" heading="{{exp.name}}" active="tab.active" disabled="tab.disabled">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{exp.title}}</h3>
+            </div>
+            <div class="panel-body">
+                {{exp.description}}
+            </div>
+            <div class="panel-footer">
+                <span class="label label-default" ng-repeat="skill in exp.skills">
+                    {{skill.name}}
+                </span>
+            </div>
+        </div>
+    </tab>
+</tabset> -->
+
+<div>
+    <div style="height: 305px">
+        <carousel>
+            <slide ng-repeat="exp in experiences" active="slide.active">
+                <img ng-src="http://placekitten.com/604/300" style="margin:auto;">
+                <div class="carousel-caption">
+                    <h4>{{exp.name}}</h4>
+                    <p>{{exp.title}}</p>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>

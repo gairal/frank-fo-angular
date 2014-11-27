@@ -1,49 +1,6 @@
 @@include('tmpl/header.tmpl', {"title": "Frank Gairal"})
 
-@@include('tmpl/nav.tmpl')
-
 <!-- main content -->
-<ng-switch on="selectedIndex" class="tabpanel-container">
-    <div role="tabpanel" id="experience-content" aria-labelledby="experience" ng-switch-when="0">
-        Experienced
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {{selectedIndex}}
-    </div>
-    <div role="tabpanel" id="skill-content" aria-labelledby="skill" ng-switch-when="1">
-        Skills
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {{selectedIndex}}
-    </div>
-    <div role="tabpanel" id="motivation-content" aria-labelledby="motivation" ng-switch-when="2">
-        @@include('tmpl/motivation.tmpl')
-    </div>
-    <div role="tabpanel" id="education-content" aria-labelledby="education" ng-switch-when="3">
-
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {{selectedIndex}}
-        Educations
-    </div>
-    <div role="tabpanel" id="interest-content" aria-labelledby="interest" ng-switch-when="4">
-
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {{selectedIndex}}
-        Interests
-    </div>
-</ng-switch>
+<div ng-view></div>
 
 @@include('tmpl/footer.tmpl')

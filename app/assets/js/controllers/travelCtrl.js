@@ -1,8 +1,8 @@
 (function() {
     'use strict';
     angular.module('Gairal.controllers')
-      .controller('SkillCtrl', ['$scope', 'gairalAPIservice',function( $scope, gairalAPIservice) {
-            $scope.categories = [];
+      .controller('TravelCtrl', ['$scope', 'gairalAPIservice',function( $scope, gairalAPIservice) {
+            $scope.travels = [];
             gairalAPIservice.getSkills($scope);
       }]);
 })();

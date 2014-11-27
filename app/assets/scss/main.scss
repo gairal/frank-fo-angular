@@ -6,12 +6,21 @@
 body{
     //background-color: $background-color;
     //color: $font-color;
-    font-family: opensans-regular;
+    //font-family: opensans-regular;
+    padding-top: 70px;
 }
 a{
     text-decoration: none;
     &:hover, &:active, &:focus{
-        text-decoration: underline;
+        text-decoration: none;
+    }
+}
+
+nav {
+    @media (min-width: 768px) {
+        ul.navbar-nav.navbar-right {
+            margin-right: 0;
+        }
     }
 }
 
@@ -22,4 +31,46 @@ footer {
     }
 }
 
+//overide cursor styling to make it work with ui-bootstrap
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.modal-content {
+    border-radius: 0;
+}
+
+//Adding responsive text-align
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+ 
+@media (min-width: $screen-sm-min) {
+    .text-sm-left { text-align: left; }
+    .text-sm-right { text-align: right; }
+    .text-sm-center { text-align: center; }
+    .text-sm-justify { text-align: justify; }
+}
+ 
+@media (min-width: $screen-md-min) {
+    .text-md-left { text-align: left; }
+    .text-md-right { text-align: right; }
+    .text-md-center { text-align: center; }
+    .text-md-justify { text-align: justify; }
+}
+ 
+@media (min-width: $screen-lg-min) {
+   .text-lg-left { text-align: left; }
+   .text-lg-right { text-align: right; }
+   .text-lg-center { text-align: center; }
+   .text-lg-justify { text-align: justify; }
+}
 /* ==============================specific code=================================== */
+
+div#info-modal {
+    .modal-body{
+        font-size: 10px;
+        span.glyphicon {
+            font-size: 40px;
+        }
+    }
+}
