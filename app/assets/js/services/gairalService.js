@@ -1,13 +1,12 @@
 (function() {
     'use strict';
     angular.module('Gairal.services')
-    .factory('gairalAPIservice', ['$q', '$http', 'HostConfig', function($q, $http, HostConfig) {
-        var gairalAPI = {},
-            format = '/.json',
-            _deferred = $q.defer();
+    .factory('gairalService', ['$q', '$http', 'HostConfig', function($q, $http, HostConfig) {
+        var gairalAPI = {};
 
-        function get(path) {
-            $http.get(HostConfig.API_URL + '/' + path + format)
+        gairalAPI.get = function(path) {
+            var _deferred = $q.defer();
+            $http.get(HostConfig.API_URL + '/' + path + '/.json')
                 .success(function(data, status, headers, config) {
                     _deferred.resolve(data);
                 })
@@ -16,30 +15,10 @@
                 });
 
             return _deferred.promise;
-        }
-
-        gairalAPI.getExperiences = function(scope) {
-            var experiences = get('experiences');
-
-            experiences.then(function(data) {
-              scope.experiences = data;
-            }, function() {
-              scope.error = 'Error retrieving experiences';
-            });
-        };
-
-        gairalAPI.getSkills = function(scope) {
-            var skills = get('categories');
-
-            skills.then(function(data) {
-              scope.categories = data;
-            }, function() {
-              scope.error = 'Error retrieving skills';
-            });
         };
 
         gairalAPI.getEducations = function(scope) {
-            var educations = get('educations');
+            var educations = gairalAPI.get('educations');
 
             educations.then(function(data) {
               scope.educations = data;
@@ -48,8 +27,8 @@
             });
         };
 
-        gairalAPI.getInterests = function(scope) {
-            var interests = get('categories');
+        gairalAPI.getInterests = function(scope, q) {
+            var interests = gairalAPI.get('categories', $q.defer());
 
             interests.then(function(data) {
               scope.categories = data;
@@ -59,7 +38,7 @@
         };
 
         gairalAPI.getTravels = function(scope) {
-            var travels = get('travels');
+            var travels = gairalAPI.get('travels');
 
             travels.then(function(data) {
               scope.travels = data;

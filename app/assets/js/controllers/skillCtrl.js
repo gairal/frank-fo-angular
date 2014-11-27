@@ -1,8 +1,13 @@
 (function() {
     'use strict';
     angular.module('Gairal.controllers')
-      .controller('SkillCtrl', ['$scope', 'gairalAPIservice',function( $scope, gairalAPIservice) {
+      .controller('SkillCtrl', ['$scope', 'skillService',function( $scope, skillService) {
             $scope.categories = [];
-            gairalAPIservice.getSkills($scope);
+        
+            skillService.get().then(function(data) {
+              $scope.categories = data;
+            }, function() {
+              $scope.error = 'Error retrieving skills';
+            });
       }]);
 })();
