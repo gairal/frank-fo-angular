@@ -66,11 +66,9 @@ footer {
 }
 /* ==============================specific code=================================== */
 
-div#info-modal {
-    .modal-body{
-        font-size: 10px;
-        span.glyphicon {
-            font-size: 40px;
-        }
+div.modal-body{
+    font-size: 10px;
+    span.glyphicon {
+        font-size: 40px;
     }
 }

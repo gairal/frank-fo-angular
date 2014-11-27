@@ -7,7 +7,9 @@
         'Gairal.directives',
         'Gairal.filters',
         'ngRoute',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'angular-loading-bar', 
+        'ngAnimate'
     ]);
     angular.module('Gairal.services', []);
     angular.module('Gairal.controllers', []);

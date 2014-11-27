@@ -45,9 +45,12 @@ module.exports = {
 
     vendor: {
         js: [
-            '<%= dir.vendor %>/angular-bootstrap/ui-bootstrap.js'
+            '<%= dir.vendor %>/angular-bootstrap/ui-bootstrap.js',
+            '<%= dir.vendor %>/angular-loading-bar/build/loading-bar.js'
         ],
-        css: [],
+        css: [
+            '<%= dir.vendor %>/angular-loading-bar/build/loading-bar.css'
+        ],
         assets: [
             '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
             '<%= dir.vendor %>/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
