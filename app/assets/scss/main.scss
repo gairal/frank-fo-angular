@@ -26,8 +26,14 @@ nav {
 
 footer {
     font-size: 10px;
-    .footer-info div{
-        padding: 10px;
+    padding-top: 10px;
+    div.row{
+        border-top: 1px solid grey;
+        padding: 10px 0;
+        div {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
