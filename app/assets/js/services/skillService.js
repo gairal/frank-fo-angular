@@ -7,7 +7,7 @@
         return {
             get: function() {
                 if(!promise) {
-                    promise = gairalService.get('categories');
+                    promise = gairalService.get('skillscat/?ordering=display_order');
                 }
                 return promise;
             }

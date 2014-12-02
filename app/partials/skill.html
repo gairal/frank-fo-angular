@@ -1,12 +1,10 @@
-<div>
-    <accordion close-others="oneAtATime">
-        <accordion-group ng-repeat="cat in categories" heading="{{cat.name}}">
-            <ul>
-                <li  ng-repeat="skill in cat.skills">
-                    {{skill.name}} - {{skill.description}}
-                    <progressbar ng-if="skill.level" value="skill.level" class="progress-striped active">
-                </li>
-            </ul>
-        </accordion-group>
-    </accordion>
-</div>
+<accordion close-others="oneAtATime">
+    <accordion-group ng-repeat="cat in categories" heading="{{cat.name}}">
+        <ul>
+            <li  ng-repeat="skill in cat.skills">
+                {{skill.name}} - {{skill.description}}
+                <progressbar ng-if="skill.level" value="skill.level" class="progress-striped active">
+            </li>
+        </ul>
+    </accordion-group>
+</accordion>
