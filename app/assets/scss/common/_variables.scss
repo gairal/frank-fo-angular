@@ -1,6 +1,52 @@
 /* ==============================variables=================================== */
-$font-color: #fff;
-$background-color: #000;
+$icon-font-path: "../../../vendor/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+$material-50: #E3F2FD;
+$material-100: #BBDEFB;
+$material-200: #90CAF9;
+$material-300: #64B5F6;
+$material-400: #42A5F5;
+$material-500: #2196F3;
+$material-600: #1E88E5;
+$material-700: #1976D2;
+$material-800: #1565C0;
+$material-900: #0D47A1;
+$material-A100: #84FFFF;
+$material-A200: #18FFFF;
+$material-A400: #00E5FF;
+$material-A700: #00B8D4;
+
+$material-font-text-w: rgba(255,255,255,0.87);
+$material-font-text-secondary-w: rgba(255,255,255,0.70);
+$material-font-text-divider-w: rgba(255,255,255,0.12);
+$material-font-text-b: rgba(0,0,0,0.87);
+$material-font-text-secondary-b: rgba(0,0,0,0.54);
+$material-font-text-divider-b: rgba(0,0,0,0.12);
+
+/*NAVBAR*/
 
 $navbar-border-radius: 0px;
-$icon-font-path: "../../../vendor/bootstrap-sass-official/assets/fonts/bootstrap/"
+
+$navbar-default-color:             $material-font-text-w;
+$navbar-default-bg:                $material-900;
+//$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                $material-font-text-w;
+$navbar-default-link-hover-color:          $material-font-text-secondary-w;
+$navbar-default-link-hover-bg:             $material-700;
+$navbar-default-link-active-color:         $material-font-text-secondary-w;
+$navbar-default-link-active-bg:            $material-700;
+
+//== Carousel
+//
+//##
+
+$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+
+$carousel-indicator-active-bg:                $material-font-text-secondary-b;
+$carousel-indicator-border-color:             $material-font-text-secondary-b;
+
+$carousel-caption-color:                      $material-font-text-secondary-b;
+
+

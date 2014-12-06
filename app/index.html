@@ -1,9 +1,12 @@
 @@include('tmpl/header.tmpl', {"title": "Frank Gairal"})
 
 <!-- main content -->
-<!-- <div ng-view></div> -->
+<section>
+    <h1>{{title()}}</h1>
+    <div ng-view></div>
+</section>
 
-<section ng-controller="ExperienceCtrl">
+<!-- <section ng-controller="ExperienceCtrl">
     <h1>Experience</h1>
     <ng-include src="'partials/experience.html'"></ng-include>
 </section>
@@ -16,16 +19,18 @@
 <section ng-controller="MotivationCtrl">
     <h1>Motivation</h1>
     <ng-include src="'partials/motivation.html'"></ng-include>
-</section>
+</section> -->
 
-<section ng-controller="EducationCtrl">
+<!-- <div class="container-fluid divider"></div> -->
+
+<!-- <section ng-controller="EducationCtrl">
     <h1>Education</h1>
     <ng-include src="'partials/education.html'"></ng-include>
-</section>
+</section> -->
 
-<section ng-controller="InterestCtrl">
+<!-- <section ng-controller="InterestCtrl">
     <h1>Interests</h1>
     <ng-include src="'partials/interest.html'"></ng-include>
-</section>
+</section> -->
 
 @@include('tmpl/footer.tmpl')

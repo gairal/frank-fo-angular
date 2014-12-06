@@ -1,6 +1,6 @@
 module.exports = {
 // Paths
-    projectName: 'MyProject',
+    projectName: 'gairal-fo-angular',
     dir:{
         app: 'app',
         build: 'build',

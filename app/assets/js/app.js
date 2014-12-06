@@ -16,14 +16,13 @@
     angular.module('Gairal.directives', []);
     angular.module('Gairal.filters', []);
 
-    // angular.module('Gairal').
-    //     config(['$routeProvider', function($routeProvider) {
-    //         $routeProvider.
-    //             when('/experience', {templateUrl: 'partials/experience.html', controller: 'ExperienceCtrl'}).
-    //             when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
-    //             when('/motivation', {templateUrl: 'partials/motivation.html', controller: 'MotivationCtrl'}).
-    //             when('/education', {templateUrl: 'partials/education.html', controller: 'EducationCtrl'}).
-    //             when('/interest', {templateUrl: 'partials/interest.html', controller: 'InterestCtrl'}).
-    //             otherwise({redirectTo: '/experience'});
-    //     }]);
+    angular.module('Gairal').
+        config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+                when('/experience', {templateUrl: 'partials/experience.html', controller: 'ExperienceCtrl'}).
+                when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
+                when('/education', {templateUrl: 'partials/education.html', controller: 'EducationCtrl'}).
+                when('/interest', {templateUrl: 'partials/interest.html', controller: 'InterestCtrl'}).
+                otherwise({redirectTo: '/experience'});
+        }]);
 })();
