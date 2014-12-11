@@ -134,6 +134,7 @@ module.exports = function(grunt) {
                 },
                 {
                     src: [
+                      '<%= vendor.assets %>',
                       '<%= static.src %>',
                       '<%= static.vendor %>'
                     ],
