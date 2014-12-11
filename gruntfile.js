@@ -338,7 +338,7 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       },
       sass: {
-          files: ['<%= dir.assets %>/scss/<%= app.sass %>'],
+          files: ['<%= dir.assets %>/scss/**/*.scss'],
           tasks: ['sass']
       },
       html: {
@@ -387,7 +387,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate', [
     'validation',
     'jshint',
-    'csslint',
+    //'csslint',
     //'jasmine'
   ]);
 

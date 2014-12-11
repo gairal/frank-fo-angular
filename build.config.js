@@ -46,7 +46,9 @@ module.exports = {
     vendor: {
         js: [
             '<%= dir.vendor %>/angular-bootstrap/ui-bootstrap.js',
-            '<%= dir.vendor %>/angular-loading-bar/build/loading-bar.js'
+            '<%= dir.vendor %>/angular-loading-bar/build/loading-bar.js',
+            '<%= dir.vendor %>/angular-ui-utils/ui-utils.js',
+            '<%= dir.vendor %>/angular-ui-map/ui-map.js'
         ],
         css: [
             '<%= dir.vendor %>/angular-loading-bar/build/loading-bar.css'

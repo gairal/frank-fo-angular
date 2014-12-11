@@ -4,7 +4,6 @@
     var API_HOST       = '@@apiUrl',
         APP_VERSION    = '@@appVersion',
         STATIC_HOST    = '@@staticUrl',
-        STATIC_IMG_PATH    = '/img/',
         API_PATH       = '';
 
     angular.module('Gairal.config', [])
@@ -23,6 +22,7 @@
      * see HostConfigSolver
      */
     .constant('HostConfig', {
-        API_URL:        API_HOST + API_PATH
+        API_URL:        API_HOST + API_PATH,
+        IMG_URL:        STATIC_HOST
     });
 })();

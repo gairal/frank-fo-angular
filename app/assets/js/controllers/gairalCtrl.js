@@ -2,7 +2,9 @@
     'use strict';
 
     angular.module('Gairal.controllers')
-        .controller('GairalCtrl', ['$scope', '$location', '$modal', function( $scope, $location, $modal ) {
+        .controller('GairalCtrl', ['$scope', '$location', '$modal', 'HostConfig', function( $scope, $location, $modal, HostConfig ) {
+            $scope.imgHost = HostConfig.IMG_URL;
+
             $scope.isActive = function (viewLocation) {
                 return viewLocation === $location.path();
             };

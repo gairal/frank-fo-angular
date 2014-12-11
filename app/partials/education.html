@@ -1,18 +1,24 @@
-<!-- Simple blocks comme sur l'actuel -->
-<tabset>
-    <tab ng-repeat="edu in educations" heading="{{edu.name}}" active="tab.active" disabled="tab.disabled">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{edu.diploma}}</h3>
-            </div>
-            <div class="panel-body">
-                {{edu.description}}
-            </div>
-            <div class="panel-footer">
-                <span class="label label-default" ng-repeat="skill in exp.skills">
-                    {{skill.name}}
+<div class="panel panel-edu" ng-repeat="edu in educations" itemscope="" itemtype="http://data-vocabulary.org/Organization">
+    <div class="panel-heading">{{edu.name}} - {{edu.short_description}}</div>
+    <div class="panel-body">
+        <div class="media">
+            <a class="media-left" ng-href="{{edu.website}}" target="_blank">
+                <img class="pull-left" ng-src="{{ $parent.imgHost }}/{{edu.image.path}}{{edu.image.name}}" alt="{{edu.name}}">
+            </a>
+            <div class="media-body">
+                <span class="label label-danger">
+                    {{edu.year_in | date:'yyyy'}}-{{edu.year_out | date:'yyyy'}} 
                 </span>
+                <span class="label label-info" itemprop="locality">
+                    {{edu.place}}
+                </span>
+                <a href="{{edu.website}}" target="_blank" class="label label-default" itemprop="url">{{edu.website}}</a>
+                <p>{{edu.diploma}}</p>
+                <div class="alert alert-info" ng-if="edu.extra_info" role="alert">
+                <strong>Extra-curiculars: </strong>
+                    {{edu.extra_info}}
+                </div>
             </div>
         </div>
-    </tab>
-</tabset>
+    </div>
+</div>

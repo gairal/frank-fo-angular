@@ -32,8 +32,9 @@ footer {
     font-size: 10px;
     padding-top: 10px;
     div.row{
-        border-top: 1px solid grey;
+        border-top: 1px solid $material-900;
         padding: 10px 0;
+        color: $material-900;
         div {
             padding-left: 0;
             padding-right: 0;
@@ -44,6 +45,11 @@ footer {
 .container-fluid.content {
     padding-right: 0;
     padding-left: 0;
+}
+
+.label {
+    display: inline-block;
+    border-radius: 0;
 }
 
 //overide cursor styling to make it work with ui-bootstrap
@@ -113,6 +119,19 @@ section h1 {
     color: $material-font-text-secondary-b;
 }
 
+body section img {
+    box-shadow: 0 0 4px 0 #333;
+    margin: 4px 2px;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}
+
+.card {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    margin: 8px;
+    padding: 8px;
+}
+
 /* ==============================specific code=================================== */
 
 div.modal-body{
@@ -140,5 +159,17 @@ ul.list-group {
             background-color: $material-A700;
             color: $material-font-text-secondary-w;
         }
+    }
+}
+
+.panel-edu {
+    border: 0;
+    .alert {
+        margin-bottom: 0;
+    }
+    .panel-heading {
+        background-color: $material-A700;
+        border-color: $material-A700;
+        color: $material-font-text-secondary-w;
     }
 }
