@@ -2,12 +2,12 @@ Starter build template for Gairal F-E Development
 
 ###Todo
 - Rename Accomplishement to achievments in the back
+- G+ and FB
 - Sprites
 - Jasmine
 - Express
 - Google Analytics
 - reintegrate AngularMaterial when working
-- Select only needed componenet in Bootstrap And Jquery
 
 
 ###Install

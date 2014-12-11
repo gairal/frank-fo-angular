@@ -1,14 +1,19 @@
 <!-- map au top + list interests + motiv dans une card material -->
-<accordion close-others="oneAtATime">
-    <accordion-group ng-repeat="cat in categories" heading="{{cat.name}}">
-        <ul>
-            <li  ng-repeat="interest in cat.interests">
-                {{interest.name}} - {{interest.description}}
-            </li>
-        </ul>
-    </accordion-group>
-</accordion>
-<h1>Motivation</h1>
+<div ui-map="myMap" ui-options="mapOptions" class="map-canvas"></div>
+<input type="search" class="form-control" ng-model="q" placeholder="filter interest..." />
+<ul class="list-group">
+    <li class="list-group-item category-item" ng-repeat-start="cat in categories">
+    <h4>{{cat.name}}</h4>
+    </li>
+    <li class="list-group-item interest-item" ng-repeat="interest in cat.interests | filter:q as resultInterets" ng-repeat-end>
+        <b>{{interest.name}}</b>
+        <br/>
+        <span class="secondary-text-b">{{interest.description}}</span>
+    </li>
+</ul>
+<ul class="list-group">
+    <li class="list-group-item category-item"><h4>Motivation</h4></li>
+</ul>
 <div class="container-fluid card">
     <p>
         I'm currently working as a <b>web&nbsp;project director&nbsp;</b>in the web/mobile domain located in <span class="bold">Vietnam.</span></p>
