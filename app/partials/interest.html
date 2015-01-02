@@ -1,5 +1,9 @@
 <!-- map au top + list interests + motiv dans une card material -->
-<div ui-map="myMap" ui-options="mapOptions" class="map-canvas"></div>
+<div ui-map="gairalMap" ui-options="mapOptions" class="map-canvas"
+    ui-event="{'map-click': 'displayTravelDest($event, $params)', 
+    'map-zoom_changed': 'mapZoomChanged = true',
+    'map-idle': 'mapIdle()'}"></div>
+    
 <input type="search" class="form-control" ng-model="q" placeholder="filter interest..." />
 <ul class="list-group">
     <li class="list-group-item category-item" ng-repeat-start="cat in categories">

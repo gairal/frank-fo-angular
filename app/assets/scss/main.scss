@@ -119,11 +119,12 @@ section h1 {
     color: $material-font-text-secondary-b;
 }
 
-body section img {
+img.logo {
     box-shadow: 0 0 4px 0 #333;
     margin: 4px 2px;
     -webkit-filter: grayscale(80%);
     filter: grayscale(80%);
+    border-radius: 50%;
 }
 
 .card {
@@ -174,4 +175,6 @@ ul.list-group {
     }
 }
 
-.map-canvas { height: 400px; }
+.map-canvas { 
+    height: 400px;
+}

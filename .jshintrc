@@ -23,6 +23,7 @@
 
   "globals": {
     "angular": true,
+    "google": true,
     "jQuery": true,
     "console": true,
     "undef": true,
