@@ -3,9 +3,9 @@
     angular.module('Gairal', [
         'Gairal.config',
         'Gairal.services',
-        'Gairal.controllers',
         'Gairal.directives',
         'Gairal.filters',
+        'Gairal.controllers',
         'ngRoute',
         'ui.bootstrap',
         'angular-loading-bar', 
