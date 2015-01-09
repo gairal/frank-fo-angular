@@ -133,6 +133,22 @@ img.logo {
     padding: 8px;
 }
 
+.spinner{
+    background: url(../img/icons/spinner.gif) no-repeat center center;
+    display: block;
+    width:100px;
+    height:100px;
+}
+
+
+img.spinner-show{
+    visibility: visible;
+}
+img.spinner-hide{
+    visibility: hidden;
+}
+
+
 /* ==============================specific code=================================== */
 
 div.modal-body{
@@ -163,15 +179,16 @@ ul.list-group {
     }
 }
 
+.panel-heading {
+    background-color: $material-A700;
+    border-color: $material-A700;
+    color: $material-font-text-secondary-w;
+}
+
 .panel-edu {
     border: 0;
     .alert {
         margin-bottom: 0;
-    }
-    .panel-heading {
-        background-color: $material-A700;
-        border-color: $material-A700;
-        color: $material-font-text-secondary-w;
     }
 }
 

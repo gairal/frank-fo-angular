@@ -3,6 +3,7 @@
     angular.module('Gairal.directives')
     .directive('gplus',[function (){
         return {
+            restrict: 'A',
             link: function(scope,element,attr){
                 if(typeof gapi === 'undefined'){
                     (function() {
@@ -16,6 +17,7 @@
     }])
     .directive('fb',[function (){
         return {
+            restrict: 'A',
             link: function(scope,element,attr){
                 if(typeof FB === 'undefined'){
                     var po = document.createElement('script'); po.type = 'text/javascript';
