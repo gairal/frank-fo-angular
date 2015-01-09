@@ -133,6 +133,11 @@ img.logo {
     padding: 8px;
 }
 
+.panel {
+    border-width: 0;
+    box-shadow: none;
+}
+
 .spinner{
     background: url(../img/icons/spinner.gif) no-repeat center center;
     display: block;
@@ -177,6 +182,9 @@ ul.list-group {
             color: $material-font-text-secondary-w;
         }
     }
+}
+.card.panel-exp {
+    padding: 0;
 }
 
 .panel-heading {
