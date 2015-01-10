@@ -21,7 +21,22 @@ nav {
             border-width: 0;
         }
     }
+
+    li.social{
+        padding-top: 10px;
+    }
+
+    ul.navbar-nav.navbar-right li{
+        text-align: center;
+    }
+
     @media (min-width: 768px) {
+        li.social{
+            padding-top: 15px;
+            padding-bottom: 0;
+            padding-right: 10px;
+            padding-left: 0;
+        }
         ul.navbar-nav.navbar-right {
             margin-right: 0;
         }
@@ -144,17 +159,12 @@ img.logo {
     height:100px;
 }
 
-
-img.spinner-show{
-    visibility: visible;
-}
 img.spinner-hide{
     visibility: hidden;
 }
 
 
 /* ==============================specific code=================================== */
-
 div.modal-body{
     font-size: 10px;
     span.glyphicon {
@@ -182,6 +192,20 @@ ul.list-group {
         }
     }
 }
+
+
+.ng-enter {
+    -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+    opacity:0;
+}
+.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+
 .card.panel-exp {
     padding: 0;
 }

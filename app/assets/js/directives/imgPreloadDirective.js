@@ -10,7 +10,7 @@
             link: function(scope,element){
                 element.on('load', function() {
                     element.removeClass('spinner-hide');
-                    element.addClass('spinner-show');
+                    element.addClass('in');
                     element.parent().find('span').remove();
                 });
                 scope.$watch('ngSrc', function() {

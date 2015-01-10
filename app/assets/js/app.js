@@ -18,7 +18,8 @@
     angular.module('Gairal.filters', []);
 
     angular.module('Gairal').
-        config(['$routeProvider', function($routeProvider) {
+        config(['$routeProvider', 'cfpLoadingBarProvider', function($routeProvider, cfpLoadingBarProvider) {
+            cfpLoadingBarProvider.includeSpinner = false;
             $routeProvider.
                 when('/experience', {templateUrl: 'partials/experience.html', controller: 'ExperienceCtrl'}).
                 when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).

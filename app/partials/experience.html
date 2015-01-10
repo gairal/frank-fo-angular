@@ -11,12 +11,12 @@
     </slide>
 </carousel> -->
 
-<div class="panel panel-exp card" ng-repeat="exp in experiences" itemscope="" itemtype="http://data-vocabulary.org/Organization">
+<div class="panel panel-exp card" ng-repeat="exp in experiences" itemscope="" itemtype="http://data-vocabulary.org/Organization" ng-animate=" 'animate' ">
     <div class="panel-heading">{{exp.name}} - {{exp.title}}</div>
     <div class="panel-body">
         <div class="media">
             <a class="media-left" ng-href="{{exp.website}}" target="_blank">
-                <img img-preload class="pull-left logo" ng-src="{{ $parent.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
+                <img img-preload class="pull-left logo fade" ng-src="{{ $parent.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
             </a>
             <div class="media-body">
                 <span class="label label-danger">

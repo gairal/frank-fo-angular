@@ -8,6 +8,9 @@ Starter build template for Gairal F-E Development
 - Express
 - Google Analytics
 - reintegrate AngularMaterial when working
+- 404
+- fusionner bqckelites
+- fix typos
 
 
 ###Install
