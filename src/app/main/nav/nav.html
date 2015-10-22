@@ -1,0 +1,67 @@
+    <md-toolbar layout layout-padding>
+      <md-button class="md-icon-button menu" aria-label="home" ui-sref="experience">
+        <img alt="Frank Gairal" src="assets/img/icons/logo.png"/>
+      </md-button>
+      <h2>{{'global.title' | translate}}</h2>
+    </md-toolbar>
+    
+    <md-list class="list-button-left">
+      <md-list-item>
+          <md-button ui-sref="experience" ui-sref-active="md-accent" flex>
+            <md-icon md-font-library="material-icons">home</md-icon>
+            {{'global.menu.experiences.main' | translate}}
+          </md-button>
+      </md-list-item>
+      <md-list-item>
+          <md-button ui-sref="skill" ui-sref-active="md-accent" flex>
+            <md-icon md-font-library="material-icons">home</md-icon>
+            {{'global.menu.skills.main' | translate}}
+          </md-button>
+      </md-list-item>
+      <md-list-item>
+          <md-button ui-sref="education" ui-sref-active="md-accent" flex>
+            <md-icon md-font-library="material-icons">home</md-icon>
+            {{'global.menu.education.main' | translate}}
+          </md-button>
+      </md-list-item>
+      <md-list-item>
+          <md-button ui-sref="interest" ui-sref-active="md-accent" flex>
+            <md-icon md-font-library="material-icons">home</md-icon>
+            {{'global.menu.interests.main' | translate}}
+          </md-button>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item>
+          <div fb class="fb-like" data-href="http://google.com/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+      </md-list-item>
+      <md-list-item>
+          <div gplus class="g-plusone" data-size="medium" data-annotation="none" data-href="http://frank.gairal.com/"></div>
+      </md-list-item>
+      <md-list-item>
+          <button type="button" class="btn btn-default navbar-btn" ng-click="showContact()">Contact</button>
+      </md-list-item>
+      <md-list-item>
+          <md-menu>
+            <md-button aria-label="Open Account menu" ng-click="$mdOpenMenu()" ng-class="{'md-accent':$root.toState.name.includes('user')}" flex>
+              <md-icon md-font-library="material-icons">account_box</md-icon>
+              {{'global.menu.account.main' | translate}}
+            </md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button ui-sref="user">
+                  <md-icon md-font-library="material-icons">account_circle</md-icon>
+                  {{'global.menu.account.profile' | translate}}
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ui-sref="logout">
+                  <md-icon md-font-library="material-icons">lock_open</md-icon>
+                  {{'global.menu.account.logout' | translate}}
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-subheader>{{'global.version' | translate}} : {{ version }}</md-subheader>
+    </md-list>

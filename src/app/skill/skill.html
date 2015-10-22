@@ -1,0 +1,12 @@
+<input type="search" class="form-control" ng-model="q" placeholder="filter skills..." />
+<ul class="list-group">
+    <li class="list-group-item category-item" ng-repeat-start="cat in categories">
+    <h4>{{cat.name}}</h4>
+    </li>
+    <li class="list-group-item skill-item" ng-repeat="skill in cat.skills | filter:q as resultSkills" ng-repeat-end>
+        <b>{{skill.name}}</b>
+        <br/>
+        <span class="secondary-text-b">{{skill.description}}</span>
+        <progressbar ng-if="skill.level" value="skill.level" class="progress-striped active"/>
+    </li>
+</ul>

@@ -47,6 +47,7 @@ node_modules
 components
 vendor
 bower_components
+public
 build
 compile
 
@@ -55,3 +56,5 @@ _SpecRunner.html
 /app/assets/less/*.css
 /app/assets/scss/*.css
 ./*.zip
+/reports
+TESTS-*.xml

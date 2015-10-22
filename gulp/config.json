@@ -1,0 +1,70 @@
+{
+    "base": {
+        "src": "src/",
+        "build": "build/",
+        "compile": "compile/",
+        "test": "test/",
+        "vendor": "vendor/",
+        "static": "static/",
+        "mocks": "mocks/"
+    },
+    "path": {
+        "sass": "assets/scss/",
+        "css": "assets/css/",
+        "images": "assets/img/",
+        "fonts": "assets/fonts/",
+        "js": "app/",
+        "i18n": "i18n/",
+        "root": "root/"
+    },
+    "files": {
+        "index": "index.html",
+        "html": "**/*.html",
+        "tmpl": "**/*.tmpl",
+        "sass": "app.scss",
+        "sassAll": "**/*.scss",
+        "css": "**/*.css",
+        "js": "**/*.js",
+        "fonts": "**",
+        "images": "{,*/}*.{png,jpg,jpeg,gif}",
+        "i18n": "**",
+        "root": "**",
+        "hidden": ".**",
+        "static": "**/*.*",
+        "mocks": "**"
+    },
+    "vendor":{
+        "js": [
+            "vendor/angular/angular.js",
+            "vendor/angular-resource/angular-resource.js",
+            "vendor/angular-ui-router/release/angular-ui-router.js",
+            "vendor/angular-animate/angular-animate.js",
+            "vendor/angular-aria/angular-aria.js",
+            "vendor/angular-material/angular-material.js",
+            "vendor/angular-sanitize/angular-sanitize.js",
+            "vendor/angular-translate/angular-translate.js",
+            "vendor/angular-mocks/angular-mocks.js",
+            "vendor/angular-translate-loader-partial/angular-translate-loader-partial.js",
+            "vendor/angular-loading-bar/build/loading-bar.js"
+        ],
+        "css": [
+            "vendor/angular-material/angular-material.css",
+            "vendor/angular-loading-bar/build/loading-bar.css"
+        ],
+        "assets": []
+    },
+    "env": {
+        "prod": {
+            "api_url": "//api-gairal.herokuapp.com",
+            "static_url": "//static.gairal.com"
+        },
+        "dev": {
+            "api_url": "//api-gairal.herokuapp.com",
+            "static_url": "//static.gairal.com"
+        },
+        "mock": {
+            "api_url": "//localhost:8000",
+            "static_url": "//static.gairal.com"
+        }
+    }
+}

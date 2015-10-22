@@ -1,0 +1,5 @@
+- switch to github
+- 1 page for gairal.com
+- update favicon
+- add unit tests
+- add gAnalytics

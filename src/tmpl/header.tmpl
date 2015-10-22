@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" itemscope itemtype="http://schema.org/Person"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" itemscope itemtype="http://schema.org/Person"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" itemscope itemtype="http://schema.org/Person"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js" ng-app="@@appName" ng-controller="GairalController as gairalCtrl" itemscope itemtype="http://schema.org/Person"> <!--<![endif]-->
+    <head>
+        <!--[if lt IE 8]>
+        <script>
+            window.location.href = 'static/browserHappy/browserHappy.html';
+        </script>
+        <![endif]-->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title data-ng-bind="'Frank Gairal &mdash; ' + title">{{'global.title' | translate}}</title>
+        <meta name="description" content="Frank Gairal online C.V. - In position in HCMC">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta itemprop="name" content="Frank Gairal">
+        <meta itemprop="image" content="img/og-img.png">
+        <meta itemprop="description" content="Frank Gairal online C.V. - In position in HCMC">
+
+        <meta property="og:locale" content="en_EN">
+        <meta property="og:type" content="website">
+        <meta property="og:title" data-ng-bind="'Frank Gairal &mdash; ' + title" content="{{'global.title' | translate}}">
+        <meta property="og:site_name" content="Frank Gairal">
+        <meta property="og:image" content="img/og-img.png">
+        <meta property="og:description" content="Frank Gairal online C.V. - In position in HCMC">
+        <meta property="og:url" content="http://frank.gairal.com/">
+
+        <meta name="application-name" content="Frank Gairal"> 
+        <meta name="msapplication-TileColor" content="#F27405">
+        <meta name="msapplication-TileImage" content="img/ogImg.png">        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--favicon in base64-->
+        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH3QEDAB0Mu3sDOAAAAJNJREFUSMdjjC3OZqAZmMo4i4mmpjMwMDDR1HRaWQA3nSYWIJtOfQvQTGdgYGDBVNRWX0K2BR8Z0PXSMBWNWjBiLGAkvrBDS75VjT2YqZ6aPiDG9NFIpqYFRIY4JiC2sMMsxT7W3cJUxt+kNhrJoxZQHbAQk9So6QOyMxRRFlDddBQLaGE6wgIamQ61gHamMzAwAABxTx/OYLAzeAAAAABJRU5ErkJggg==" type="image/x-icon">
+        <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png" />
+        <style type="text/css">
+            div.loader {
+                zoom: 1.7;
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            div#boostrap-loader {
+                background-color: rgb(233,30,99);
+                bottom: 0px;
+                left: 0px;
+                position: fixed;
+                right: 0px;
+                top: 0px;
+                z-index: 999999;
+            }
+
+            svg.circular {
+                -webkit-animation: rotate 2s linear infinite;
+                animation: rotate 2s linear infinite;
+                height: 100px;
+                position: relative;
+                width: 100px;
+            }
+
+            circle.path {
+                stroke-dasharray: 1,200;
+                stroke-dashoffset: 0;
+                -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+                animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+                stroke-linecap: round;
+                stroke: #eee;
+            }
+
+            @-webkit-keyframes rotate {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotate {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            @-webkit-keyframes dash {
+                0% {
+                    stroke-dasharray: 1,200;
+                    stroke-dashoffset: 0;
+                }
+                50% {
+                    stroke-dasharray: 89,200;
+                    stroke-dashoffset: -35;
+                }
+                100% {
+                    stroke-dasharray: 89,200;
+                    stroke-dashoffset: -124;
+                }
+            }
+            @keyframes dash {
+                0% {
+                    stroke-dasharray: 1,200;
+                    stroke-dashoffset: 0;
+                }
+                50% {
+                    stroke-dasharray: 89,200;
+                    stroke-dashoffset: -35;
+                }
+                100% {
+                    stroke-dasharray: 89,200;
+                    stroke-dashoffset: -124;
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- build:css assets/css/gairal.min.css -->
+        <link rel="stylesheet" href="vendor/angular-material/angular-material.css" />
+        <link rel="stylesheet" href="vendor/angular-loading-bar/build/loading-bar.css" />
+        <link rel="stylesheet" href="assets/css/app.css" />
+        <!-- endbuild -->
+    </head>
+    <body layout="row">
+        <div data-ng-if id="boostrap-loader">
+            <div class="loader">
+                <svg class="circular">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
+        <md-sidenav ui-view="sidenav" class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-sm')"
+                data-ng-cloak>
+        </md-sidenav>
+        <!-- START MAIN CONTENT -->
+        <md-content layout="column" tabindex="-1" role="main" ng-cloak flex>
+            <md-toolbar>
+                <div layout="row" layout-padding>
+                    <md-button class="menu" hide-gt-sm data-ng-click="$root.toggleNav()" aria-label="Show Nav">
+                        <md-icon md-font-library="material-icons">dehaze</md-icon>
+                    </md-button>
+                    <h1 data-ng-bind="title"></h1>
+                </div>
+            </md-toolbar>
+            <md-content id="content">

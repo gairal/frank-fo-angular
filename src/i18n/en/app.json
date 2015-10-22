@@ -1,0 +1,25 @@
+{
+    "global": {
+        "title": "TEST",
+        "version": "version",
+        "menu": {
+            "experiences": {
+                "main": "experiences"
+            },
+            "skills": {
+                "main": "skills"
+            },
+            "education": {
+                "main": "education"
+            },
+            "interests": {
+                "main": "interests"
+            },
+            "account": {
+                "main": "Account",
+                "profile": "Profile",
+                "logout": "Logout"
+            }
+        }
+    }
+}
