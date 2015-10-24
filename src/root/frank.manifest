@@ -4,22 +4,22 @@ CACHE MANIFEST
 
 
 /
-http://static.frank.gairal.com/css/style.min.css
-http://static.frank.gairal.com/scripts/fk.min.js
-http://static.frank.gairal.com/scripts/fk.xp.min.js
-http://static.frank.gairal.com/scripts/fk.geoloc.min.js
-http://static.frank.gairal.com/scripts/fk.map.min.js
+http://static.gairal.com/css/style.min.css
+http://static.gairal.com/scripts/fk.min.js
+http://static.gairal.com/scripts/fk.xp.min.js
+http://static.gairal.com/scripts/fk.geoloc.min.js
+http://static.gairal.com/scripts/fk.map.min.js
 
 CACHE:
-http://static.frank.gairal.com/img/alyzair.png
-http://static.frank.gairal.com/img/bk.png
-http://static.frank.gairal.com/img/efrei.png
-http://static.frank.gairal.com/img/orange.png
-http://static.frank.gairal.com/img/phonereader.png
-http://static.frank.gairal.com/img/ratp.png
-http://static.frank.gairal.com/img/enc.jpg
-http://static.frank.gairal.com/img/spf.png
-http://static.frank.gairal.com/files/frank.gairal.pdf
+http://static.gairal.com/img/alyzair.png
+http://static.gairal.com/img/bk.png
+http://static.gairal.com/img/efrei.png
+http://static.gairal.com/img/orange.png
+http://static.gairal.com/img/phonereader.png
+http://static.gairal.com/img/ratp.png
+http://static.gairal.com/img/enc.jpg
+http://static.gairal.com/img/spf.png
+http://static.gairal.com/files/frank.gairal.pdf
 
 FALLBACK:
 /

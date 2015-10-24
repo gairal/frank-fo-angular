@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "TEST",
+        "title": "Frank Gairal",
         "version": "version",
         "menu": {
             "experiences": {
@@ -15,10 +15,8 @@
             "interests": {
                 "main": "interests"
             },
-            "account": {
-                "main": "Account",
-                "profile": "Profile",
-                "logout": "Logout"
+            "contact": {
+                "main": "Contact"
             }
         }
     }

@@ -7,19 +7,9 @@
         'ngMaterial',
         'ui.router',
         'ngSanitize',
-        'pascalprecht.translate'
+        'pascalprecht.translate',
+        'uiGmapgoogle-maps'
     ]);
-
-    // angular.module('@@appName').
-    //     config(['$routeProvider', 'cfpLoadingBarProvider', function($routeProvider, cfpLoadingBarProvider) {
-    //         cfpLoadingBarProvider.includeSpinner = false;
-    //         $routeProvider.
-    //             when('/experience', {templateUrl: 'partials/experience.html', controller: 'ExperienceCtrl'}).
-    //             when('/skill', {templateUrl: 'partials/skill.html', controller: 'SkillCtrl'}).
-    //             when('/education', {templateUrl: 'partials/education.html', controller: 'EducationCtrl'}).
-    //             when('/interest', {templateUrl: 'partials/interest.html', controller: 'InterestCtrl'}).
-    //             otherwise({redirectTo: '/experience'});
-    //     }]);
 
     angular.module('@@appName')
         .factory('httpInterceptor', ['$q', '$injector', 'conf', '$rootScope',
@@ -51,8 +41,8 @@
                 }
             };
         }])
-        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$translateProvider', '$mdThemingProvider', '$resourceProvider', 'cfpLoadingBarProvider', 
-            function ($stateProvider, $urlRouterProvider, $httpProvider, $translateProvider, $mdThemingProvider, $resourceProvider, cfpLoadingBarProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$translateProvider', '$mdThemingProvider', '$resourceProvider', 'cfpLoadingBarProvider', 'uiGmapGoogleMapApiProvider', 
+            function ($stateProvider, $urlRouterProvider, $httpProvider, $translateProvider, $mdThemingProvider, $resourceProvider, cfpLoadingBarProvider, uiGmapGoogleMapApiProvider) {
             cfpLoadingBarProvider.includeSpinner = false;
             
             $urlRouterProvider.otherwise('/home');
@@ -91,8 +81,8 @@
             $httpProvider.interceptors.push('httpInterceptor');
             $resourceProvider.defaults.stripTrailingSlashes = true;
             $mdThemingProvider.theme('default')
-              .primaryPalette('teal')
-              .accentPalette('amber');
+              .primaryPalette('cyan')
+              .accentPalette('teal');
 
             // Initialize angular-translate
             $translateProvider.useLoader('$translatePartialLoader', {
@@ -100,6 +90,10 @@
             });
             $translateProvider.preferredLanguage('en');
             $translateProvider.useSanitizeValueStrategy('escaped');
+
+            uiGmapGoogleMapApiProvider.configure({
+                v: '3.20'
+            });
 
         }])
         .run(['$rootScope', '$state', '$translate', '$mdSidenav', 'conf', 

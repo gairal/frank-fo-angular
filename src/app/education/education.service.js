@@ -1,16 +1,26 @@
 (function() {
     'use strict';
     angular.module('@@appName')
-    .factory('Education', ['$http', 'Gairal', function($http, Gairal) {
-        var promise;
-
-        return {
-            get: function() {
-                if(!promise) {
-                    promise = Gairal.get('educations');
+    .config(['$stateProvider', function ($stateProvider) {
+        $stateProvider
+            .state('education', {
+                parent: 'root',
+                url: '/education',
+                data: {
+                    roles: [], 
+                    pageTitle: 'education.title'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'app/education/education.html',
+                        controller: 'EducationController'
+                    }
                 }
-                return promise;
-            }
-        };
+            });
+    }])
+    .factory('Education', ['conf', '$resource',
+        function(conf, $resource) {
+
+        return $resource(conf.API.BASEURL + conf.API.EDUCATION.path + '/:eduId',{eduId: '@id'});
     }]);
 })();

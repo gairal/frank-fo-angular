@@ -51,7 +51,7 @@
                 transform: translate(-50%, -50%);
             }
             div#boostrap-loader {
-                background-color: rgb(233,30,99);
+                background-color: #00BCD4;
                 bottom: 0px;
                 left: 0px;
                 position: fixed;
@@ -143,11 +143,12 @@
         <!-- START MAIN CONTENT -->
         <md-content layout="column" tabindex="-1" role="main" ng-cloak flex>
             <md-toolbar>
+                <div flex></div>
                 <div layout="row" layout-padding>
                     <md-button class="menu" hide-gt-sm data-ng-click="$root.toggleNav()" aria-label="Show Nav">
                         <md-icon md-font-library="material-icons">dehaze</md-icon>
                     </md-button>
-                    <h1 data-ng-bind="title"></h1>
+                    <h2 data-ng-bind="title"></h2>
                 </div>
             </md-toolbar>
             <md-content id="content">

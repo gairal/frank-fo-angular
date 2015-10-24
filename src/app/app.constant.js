@@ -15,9 +15,9 @@
                 path: '/skills'
             },
             EDUCATION: {
-                path: '/education'
+                path: '/educations'
             },
-            INTERESTS: {
+            INTEREST: {
                 path: '/interestscat'
             },
             TRAVEL: {

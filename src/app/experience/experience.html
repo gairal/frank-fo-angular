@@ -1,33 +1,16 @@
-<!-- virer les shadows + mettre un fond color http://onepagelove.com/mountainhead + modal when opening details-->
-<!-- <carousel>
-    <slide ng-repeat="exp in experiences" active="slide.active">
-        <div class="carousel-content">
-            <h4>{{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}</h4>
-            <span class="label label-danger" itemprop="name">{{exp.name}}</span>
-            <span class="label label-info" itemprop="locality">{{exp.place}}</span>
-            <a href="{{exp.website}}" onclick="window.open('http://www.ekino.com/'); return false;" class="label label-primary" itemprop="url">{{exp.website}}</a>
-            <p>{{exp.description}}</p>
-        </div>
-    </slide>
-</carousel> -->
-
-<div class="panel panel-exp card" ng-repeat="exp in experiences" itemscope="" itemtype="http://data-vocabulary.org/Organization" ng-animate=" 'animate' ">
-    <div class="panel-heading">{{exp.name}} - {{exp.title}}</div>
-    <div class="panel-body">
-        <div class="media">
-            <a class="media-left" ng-href="{{exp.website}}" target="_blank">
-                <img img-preload class="pull-left logo fade" ng-src="{{ $root.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
-            </a>
-            <div class="media-body">
-                <span class="label label-danger">
-                    {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
-                </span>
-                <span class="label label-info" itemprop="locality">
-                    {{exp.place}}
-                </span>
-                <a href="{{exp.website}}" target="_blank" class="label label-default" itemprop="url">{{exp.website}}</a>
-                <p>{{exp.description}}</p>
-            </div>
-        </div>
-    </div>
-</div>
+<md-card ng-repeat="exp in experiences" itemscope="" itemtype="http://data-vocabulary.org/Organization">
+    <img img-preload class="pull-left logo fade" ng-src="{{ $root.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
+    <md-card-content>
+        <md-subheader class="md-no-sticky">{{exp.name}} - {{exp.title}}</md-subheader>
+        <md-button class="md-raised md-mini md-primary" href="{{exp.website}}" target="_blank" itemprop="url">
+            {{exp.website}}
+        </md-button>
+        <md-button class="md-raised md-mini md-accent">
+            {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
+        </md-button>
+        <md-button class="md-raised md-mini" itemprop="locality">
+            {{exp.place}}
+        </md-button>
+        <p>{{exp.description}}</p>
+    </md-card-content>
+</md-card>

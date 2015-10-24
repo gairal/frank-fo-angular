@@ -1,7 +1,8 @@
 (function() {
     'use strict';
     angular.module('@@appName')
-    .config(['$stateProvider', function ($stateProvider) {
+    .config(['$stateProvider', 
+        function ($stateProvider) {
         $stateProvider
             .state('interest', {
                 parent: 'root',
@@ -21,6 +22,9 @@
     .factory('Interest', ['conf', '$resource',
         function(conf, $resource) {
 
-        return $resource(conf.API.BASEURL + conf.API.INTEREST.path + '/:interestId' + '/?ordering=display_order',{interestId: '@id'});
+        return {
+            interest: $resource(conf.API.BASEURL + conf.API.INTEREST.path + '/:interestId' + '/?ordering=display_order',{interestId: '@id'}),
+            travel: $resource(conf.API.BASEURL + conf.API.TRAVEL.path + '/:travelId')
+        };
     }]);
 })();

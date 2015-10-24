@@ -32,35 +32,14 @@
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
+          <md-button aria-label="Contact" ng-click="$mdOpenMenu()" flex>
+            <md-icon md-font-library="material-icons">account_box</md-icon>
+            {{'global.menu.contact.main' | translate}}
+          </md-button>
+      </md-list-item>
+      <md-list-item layout>
           <div fb class="fb-like" data-href="http://google.com/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-      </md-list-item>
-      <md-list-item>
           <div gplus class="g-plusone" data-size="medium" data-annotation="none" data-href="http://frank.gairal.com/"></div>
-      </md-list-item>
-      <md-list-item>
-          <button type="button" class="btn btn-default navbar-btn" ng-click="showContact()">Contact</button>
-      </md-list-item>
-      <md-list-item>
-          <md-menu>
-            <md-button aria-label="Open Account menu" ng-click="$mdOpenMenu()" ng-class="{'md-accent':$root.toState.name.includes('user')}" flex>
-              <md-icon md-font-library="material-icons">account_box</md-icon>
-              {{'global.menu.account.main' | translate}}
-            </md-button>
-            <md-menu-content width="4">
-              <md-menu-item>
-                <md-button ui-sref="user">
-                  <md-icon md-font-library="material-icons">account_circle</md-icon>
-                  {{'global.menu.account.profile' | translate}}
-                </md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button ui-sref="logout">
-                  <md-icon md-font-library="material-icons">lock_open</md-icon>
-                  {{'global.menu.account.logout' | translate}}
-                </md-button>
-              </md-menu-item>
-            </md-menu-content>
-          </md-menu>
       </md-list-item>
       <md-divider></md-divider>
       <md-subheader>{{'global.version' | translate}} : {{ version }}</md-subheader>

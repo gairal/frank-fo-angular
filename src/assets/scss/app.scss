@@ -42,28 +42,9 @@ md-list{
 /* ==============================
     Specific Code
 =================================== */
-
+.angular-google-map-container { height: 400px; }
 
 /**TO BE REMOVED **/
-footer {
-    font-size: 10px;
-    padding-top: 10px;
-    div.row{
-        border-top: 1px solid $accent-color;
-        padding: 10px 0;
-        color: $accent-color;
-        div {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-}
-
-.label {
-    display: inline-block;
-    border-radius: 0;
-}
-
 .logo {
     box-shadow: 0 0 4px 0 #333;
     margin: 4px 2px;

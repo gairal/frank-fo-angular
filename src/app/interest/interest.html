@@ -1,25 +1,26 @@
-<!-- map au top + list interests + motiv dans une card material -->
-<div ui-map="gairalMap" ui-options="mapOptions" class="map-canvas hidden-xs"
-    ui-event="{'map-click': 'displayTravelDest($event, $params)',
-    'map-zoom_changed': 'mapZoomChanged = true',
-    'map-dragstart': 'mapZoomChanged = true',
-    'map-idle': 'mapIdle()'}"></div>
-
-<input type="search" class="form-control" ng-model="q" placeholder="filter interest..." />
-<ul class="list-group">
-    <li class="list-group-item category-item" ng-repeat-start="cat in categories">
-    <h4>{{cat.name}}</h4>
-    </li>
-    <li class="list-group-item interest-item" ng-repeat="interest in cat.interests | filter:q as resultInterets" ng-repeat-end>
-        <b>{{interest.name}}</b>
-        <br/>
-        <span class="secondary-text-b">{{interest.description}}</span>
-    </li>
-</ul>
-<ul class="list-group">
-    <li class="list-group-item category-item"><h4>Motivation</h4></li>
-</ul>
-<div class="container-fluid card">
+<ui-gmap-google-map center="map.center" 
+    zoom="map.zoom" 
+    bounds="map.bounds" 
+    class="map-canvas" 
+    options="map.options"
+    dragging="map.zoomChanged"
+    ui-event="{,
+    'map-zoom_changed': 'map.zoomChanged = true',
+    'map-idle': 'mapIdle()'}"></ui-gmap-google-map>
+<md-input-container>
+    <input type="search" ng-model="q" placeholder="filter skills..." />
+</md-input-container>
+<md-list>
+    <md-subheader class="md-no-sticky" ng-repeat-start="cat in categories">{{cat.name}}</md-subheader>
+    <md-list-item class="md-2-line" ng-repeat="skill in cat.skills | filter:q as resultSkills" ng-repeat-end>
+        <div class="md-list-item-text" layout="column">
+          <h3>{{interest.name}}</h3>
+          <h4>{{interest.description}}</h4>
+        </div>
+    </md-list-item>
+</md-list>
+<md-subheader>Motivation</md-subheader>
+<md-card layout-padding>
     <p>
         I'm currently working as a <b>web&nbsp;project director&nbsp;</b>in the web/mobile domain located in <span class="bold">Vietnam.</span></p>
     <br>
@@ -46,4 +47,4 @@
     <p>
         Regarding these elements, I invite you to browse this site and I hope my profile will pick your interest.
     </p>
-</div>
+</md-card>
