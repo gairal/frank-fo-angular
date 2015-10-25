@@ -11,7 +11,7 @@
                     templateUrl: 'app/skill/dialog/skill.dialog.html',
                     clickOutsideToClose:true,
                     controller: function ($scope, skills) { 
-                        $scope.skills = skills  
+                        $scope.skills = skills;
                     }
                 });
             };
