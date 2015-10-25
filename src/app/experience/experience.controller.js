@@ -10,9 +10,12 @@
                     locals:{skills: skills},
                     templateUrl: 'app/skill/dialog/skill.dialog.html',
                     clickOutsideToClose:true,
-                    controller: function ($scope, skills) { 
+                    controller: ['$scope', 'skills', function ($scope, skills) { 
                         $scope.skills = skills;
-                    }
+                        $scope.hide = function() {
+                            $mdDialog.hide();
+                        };
+                    }]
                 });
             };
 
