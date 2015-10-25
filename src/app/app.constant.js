@@ -12,7 +12,7 @@
                 path: '/experiences'
             },
             SKILL: {
-                path: '/skills'
+                path: '/skillscat'
             },
             EDUCATION: {
                 path: '/educations'

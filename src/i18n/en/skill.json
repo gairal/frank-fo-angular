@@ -1,5 +1,6 @@
 {
     "skill": {
-        "title": "Skills"
+        "title": "Skills",
+        "filter_placeholder": "filter skills..."
     }
 }

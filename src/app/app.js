@@ -81,8 +81,8 @@
             $httpProvider.interceptors.push('httpInterceptor');
             $resourceProvider.defaults.stripTrailingSlashes = true;
             $mdThemingProvider.theme('default')
-              .primaryPalette('cyan')
-              .accentPalette('teal');
+              .primaryPalette('blue-grey')
+              .accentPalette('indigo');
 
             // Initialize angular-translate
             $translateProvider.useLoader('$translatePartialLoader', {

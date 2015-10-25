@@ -18,3 +18,26 @@
         </p>
     </md-card-content>
 </md-card>
+
+
+
+<md-list>
+    <md-list-item ng-repeat="edu in educations" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization">
+        <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{edu.image.path}}{{edu.image.name}}" alt="{{edu.name}}">
+        <div class="md-list-item-text">
+            <h3>{{edu.name}} | {{edu.short_description}}</h3>
+            <div layout layout-sm="column">
+                <md-button class="md-raised md-mini md-primary md-hue-2" href="{{exp.website}}" target="_blank" itemprop="url">
+                    {{'experience.website' | translate}}
+                </md-button>
+                <md-button class="md-raised md-mini md-primary md-hue-1">
+                    {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
+                </md-button>
+                <md-button class="md-raised md-mini md-primary md-hue-3" itemprop="locality">
+                    {{exp.place}}
+                </md-button>
+            </div>
+            <p>{{exp.description}}</p>
+        </div>
+    </md-list-item>
+</md-list>

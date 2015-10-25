@@ -6,7 +6,9 @@
             var self = this;
 
             this.init = function(){
-                $scope.experiences = Experience.query();
+                $scope.experiences = Experience.query(function(){
+                    var test = scope.experiences;
+                });
             };
 
             self.init();

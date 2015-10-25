@@ -33,46 +33,49 @@ md-list{
   }
 }
 
-.md-icon-button img {
-    margin: auto;
-    vertical-align: middle;
-    display: inline-block;
+md-toolbar h1 {
+  margin: auto;
 }
 
 /* ==============================
     Specific Code
 =================================== */
 .angular-google-map-container { height: 400px; }
+.md-button.md-mini {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
 
 /**TO BE REMOVED **/
-.logo {
-    box-shadow: 0 0 4px 0 #333;
-    margin: 4px 2px;
-    -webkit-filter: grayscale(80%);
-    filter: grayscale(80%);
-    border-radius: 50%;
-}
+// .logo {
+//     box-shadow: 0 0 4px 0 #333;
+//     margin: 4px 2px;
+//     -webkit-filter: grayscale(80%);
+//     filter: grayscale(80%);
+//     border-radius: 50%;
+// }
 
-.spinner{
-    background: url(../img/icons/spinner.gif) no-repeat center center;
-    display: block;
-    width:100px;
-    height:100px;
-}
+// .spinner{
+//     background: url(../img/icons/spinner.gif) no-repeat center center;
+//     display: block;
+//     width:100px;
+//     height:100px;
+// }
 
-.spinner-hide{
-    visibility: hidden;
-}
+// .spinner-hide{
+//     visibility: hidden;
+// }
 
 
-.panel-edu {
-    border: 0;
-    box-shadow: none;
-    .alert {
-        margin-bottom: 0;
-    }
-}
+// .panel-edu {
+//     border: 0;
+//     box-shadow: none;
+//     .alert {
+//         margin-bottom: 0;
+//     }
+// }
 
-.map-canvas { 
-    height: 400px;
-}
+// .map-canvas { 
+//     height: 400px;
+// }
