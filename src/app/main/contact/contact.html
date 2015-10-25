@@ -1,4 +1,4 @@
-<div class="modal-body">
+<!-- <div class="modal-body">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 text-center">
@@ -31,4 +31,48 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<md-bottom-sheet class="md-list" ng-cloak>
+  <md-list>
+    <md-list-item>
+      <md-button class="md-list-item-content" href="mail:frank@gairal.com">
+        <md-icon md-font-library="material-icons">email</md-icon>
+        <span class="md-inline-list-icon-label">frank@gairal.com</span>
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button class="md-list-item-content" href="841228004703">
+        <md-icon md-font-library="material-icons">phone</md-icon>
+        <span class="md-inline-list-icon-label">+84 (0) 122 800 47 03</span>
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button class="md-list-item-content" href="https://linkedin.com/in/gairal">
+        <md-icon md-font-library="material-icons">link</md-icon>
+        <span class="md-inline-list-icon-label">Linkedin</span>
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button class="md-list-item-content" target="_blank" download="frank.gairal.pdf" ng-href="{{$root.imgHost}}/pdf/frank.gairal.pdf">
+        <md-icon md-font-library="material-icons">file_download</md-icon>
+        <span class="md-inline-list-icon-label">CV.pdf</span>
+      </md-button>
+    </md-list-item>
+  </md-list>
+</md-bottom-sheet>
+
+<md-bottom-sheet class="md-list md-has-header" ng-cloak>
+  <md-subheader>Comment Actions</md-subheader>
+  <md-list>
+    <md-list-item ng-repeat="item in items">
+      <md-button
+          ng-click="listItemClick($index)"
+          md-autofocus="$index == 2"
+          class="md-list-item-content" >
+        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+        <span class="md-inline-list-icon-label">{{ item.name }}</span>
+      </md-button>
+    </md-list-item>
+  </md-list>
+</md-bottom-sheet>

@@ -1,16 +1,16 @@
 <md-list>
-    <md-list-item ng-repeat="exp in experiences" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization">
+    <md-list-item ng-repeat="exp in experiences" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization" ng-click="openSkills(exp.skills, $event);">
         <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
         <div class="md-list-item-text">
             <h3>{{exp.name}} | {{exp.title}}</h3>
             <div layout layout-sm="column">
-                <md-button class="md-raised md-mini md-primary md-hue-2" href="{{exp.website}}" target="_blank" itemprop="url">
+                <md-button class="md-raised fk-mini md-primary md-hue-2" href="{{exp.website}}" target="_blank" itemprop="url">
                     {{'experience.website' | translate}}
                 </md-button>
-                <md-button class="md-raised md-mini md-primary md-hue-1">
+                <md-button class="md-raised fk-mini md-primary md-hue-1">
                     {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
                 </md-button>
-                <md-button class="md-raised md-mini md-primary md-hue-3" itemprop="locality">
+                <md-button class="md-raised fk-mini md-primary md-hue-3" itemprop="locality">
                     {{exp.place}}
                 </md-button>
             </div>

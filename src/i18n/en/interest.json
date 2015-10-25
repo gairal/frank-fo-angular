@@ -1,6 +1,7 @@
 {
     "interest": {
         "title": "Interests",
-        "motivation": "Motivation"
+        "motivation": "Motivation",
+        "filter_placeholder": "filter interests..."
     }
 }

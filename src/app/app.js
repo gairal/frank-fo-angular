@@ -92,7 +92,7 @@
             $translateProvider.useSanitizeValueStrategy('escaped');
 
             uiGmapGoogleMapApiProvider.configure({
-                v: '3.20'
+                v: '3.21'
             });
 
         }])

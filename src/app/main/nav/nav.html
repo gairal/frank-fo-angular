@@ -4,37 +4,37 @@
     
     <md-list class="list-button-left">
       <md-list-item>
-          <md-button ui-sref="experience" ui-sref-active="md-accent" flex>
+          <md-button ui-sref="experience" class="md-button-left" ui-sref-active="md-accent" flex>
             <md-icon md-font-library="material-icons">explore</md-icon>
             {{'global.menu.experiences.main' | translate}}
           </md-button>
       </md-list-item>
       <md-list-item>
-          <md-button ui-sref="skill" ui-sref-active="md-accent" flex>
+          <md-button ui-sref="skill" class="md-button-left" ui-sref-active="md-accent" flex>
             <md-icon md-font-library="material-icons">extension</md-icon>
             {{'global.menu.skills.main' | translate}}
           </md-button>
       </md-list-item>
       <md-list-item>
-          <md-button ui-sref="education" ui-sref-active="md-accent" flex>
+          <md-button ui-sref="education" class="md-button-left" ui-sref-active="md-accent" flex>
             <md-icon md-font-library="material-icons">book</md-icon>
             {{'global.menu.education.main' | translate}}
           </md-button>
       </md-list-item>
       <md-list-item>
-          <md-button ui-sref="interest" ui-sref-active="md-accent" flex>
+          <md-button ui-sref="interest" class="md-button-left" ui-sref-active="md-accent" flex>
             <md-icon md-font-library="material-icons">audiotrack</md-icon>
             {{'global.menu.interests.main' | translate}}
           </md-button>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item>
-          <md-button aria-label="Contact" ng-click="$mdOpenMenu()" flex>
-            <md-icon md-font-library="material-icons">account_box</md-icon>
-            {{'global.menu.contact.main' | translate}}
-          </md-button>
-      </md-list-item>
       <md-list-item layout>
+          <md-button aria-label="Contact" class="md-fab md-mini md-primary" ng-click="showContact()">
+            <md-tooltip>
+              {{'global.menu.contact.main' | translate}}
+            </md-tooltip>
+            <md-icon md-font-library="material-icons">account_box</md-icon>
+          </md-button>
           <div fb class="fb-like" data-href="http://google.com/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
           <div gplus class="g-plusone" data-size="medium" data-annotation="none" data-href="http://frank.gairal.com/"></div>
       </md-list-item>

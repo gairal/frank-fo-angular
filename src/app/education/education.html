@@ -1,43 +1,24 @@
-<md-card ng-repeat="edu in educations" itemscope="" itemtype="http://data-vocabulary.org/Organization">
-    <img img-preload class="pull-left logo fade" ng-src="{{ $root.imgHost }}/{{edu.image.path}}{{edu.image.name}}" alt="{{edu.name}}">
-    <md-card-content>
-        <md-subheader class="md-no-sticky">{{edu.name}} - {{edu.short_description}}</md-subheader>
-        <md-button class="md-raised md-mini md-accent">
-            {{edu.year_in | date:'yyyy'}}-{{edu.year_out | date:'yyyy'}} 
-        </md-button>
-        <md-button class="md-raised md-mini" itemprop="locality">
-            {{edu.place}}
-        </md-button>
-        <md-button class="md-raised md-mini md-primary" href="{{edu.website}}" target="_blank" itemprop="url">
-            {{edu.website}}
-        </md-button>
-        <p>{{edu.diploma}}</p>
-        <p ng-if="edu.extra_info">
-            <strong>Extra-curiculars: </strong>
-            {{edu.extra_info}}
-        </p>
-    </md-card-content>
-</md-card>
-
-
-
 <md-list>
     <md-list-item ng-repeat="edu in educations" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization">
-        <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{edu.image.path}}{{edu.image.name}}" alt="{{edu.name}}">
+        <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{edu.image.path + edu.image.name}}" alt="{{edu.name}}">
         <div class="md-list-item-text">
             <h3>{{edu.name}} | {{edu.short_description}}</h3>
             <div layout layout-sm="column">
-                <md-button class="md-raised md-mini md-primary md-hue-2" href="{{exp.website}}" target="_blank" itemprop="url">
-                    {{'experience.website' | translate}}
+                <md-button class="md-raised fk-mini md-primary md-hue-2" href="{{edu.website}}" target="_blank" itemprop="url">
+                    {{'education.website' | translate}}
                 </md-button>
-                <md-button class="md-raised md-mini md-primary md-hue-1">
-                    {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
+                <md-button class="md-raised fk-mini md-primary md-hue-1">
+                    {{edu.year_in | date:'yyyy'}}-{{edu.year_out | date:'yyyy'}} 
                 </md-button>
-                <md-button class="md-raised md-mini md-primary md-hue-3" itemprop="locality">
-                    {{exp.place}}
+                <md-button class="md-raised fk-mini md-primary md-hue-3" itemprop="locality">
+                    {{edu.place}}
                 </md-button>
             </div>
-            <p>{{exp.description}}</p>
+            <p>{{edu.diploma}}</p>
+            <p ng-if="edu.extra_info">
+                <strong>Extra-curiculars: </strong>
+                {{edu.extra_info}}
+            </p>
         </div>
     </md-list-item>
 </md-list>

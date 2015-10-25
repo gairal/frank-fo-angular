@@ -1,0 +1,28 @@
+<md-dialog aria-label="Skills" ng-cloak>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Skills</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-font-library="material-icons" aria-label="Close dialog">close</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+    <md-input-container flex>
+        <label>{{'skill.filter_placeholder' | translate}}</label>
+        <input type="search" ng-model="q" />
+    </md-input-container>
+        <md-list>
+            <md-list-item class="md-2-line" ng-repeat="skill in skills | filter:q as resultSkills">
+                <div class="md-list-item-text" layout="column">
+                    <div layout>
+                        <h4>{{skill.name}}<span ng-if="skill.description"> | {{skill.description}}</span></h4>
+                    </div>
+                    <md-progress-linear ng-if="skill.level" md-mode="determinate" value="{{skill.level}}"></md-progress-linear>
+                </div>
+            </md-list-item>
+            <md-divider ng-repeat-end></md-divider>
+        </md-list>
+    </md-dialog-content>
+</md-dialog>

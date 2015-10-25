@@ -3,52 +3,36 @@
     angular.module('@@appName')
       .controller('InterestController', ['$scope', 'Interest', 'uiGmapGoogleMapApi',
         function( $scope, Interest, uiGmapGoogleMapApi) {
-        var self = this, maps;
+            var self = this;
 
-        this.displayTravels = function (travels) {
-        var markerCoord = null,
-            c = 0;
-        var interval = setInterval(function() {
-                markerCoord = new self.maps.LatLng(travels[c].latitude, travels[c].longitude);
-                self.addMarker(markerCoord, travels[c].place, self.maps.Animation.DROP);
-                //$scope.map.bounds = markerCoord;
+        this.displayTravels = function (markers) {
+            var map = $scope.map.control.getGMap(), c = 0,
+            interval = setInterval(function() {
+                markers[c].setMap(map);
                 if (!$scope.map.zoomChanged) {
-                    $scope.gairalMap.setCenter(markerCoord);
+                    map.setCenter(markers[c].position);
                 }
-                c++;
-                if (c >= travels.length) {
+                c++; 
+                if (c >= markers.length) {
+                    $scope.map.zoom = 2;
                     clearInterval(interval);
-                    $scope.gairalMap.fitBounds($scope.map.bounds);
-                    $scope.gairalMap.setZoom(2);
                 }
             }, 2000);
         };
 
-        $scope.mapIdle = function () {
-            $scope.map.zoomChanged = false;
-            if(!$scope.map.loaded) {
-                $scope.map.bounds = self.maps.LatLngBounds();
-                $scope.map.loaded=true;
+        this.initGMaps = function(maps, travels){
+            var markers = [];
+            for(var i=0, len=travels.length; i < len; i++){
+                markers.push(new maps.Marker({
+                    position: new maps.LatLng(travels[i].latitude, travels[i].longitude),
+                    title: travels[i].place,
+                    animation: maps.Animation.DROP
+                }));
             }
-        };
-
-        this.addMarker = function (latLng, title, animation) {
-            new self.maps.Marker({
-                position: latLng,
-                map: $scope.gairalMap,
-                title: title,
-                animation: animation
-            });
+            self.displayTravels(markers);
         };
 
         this.init = function(){
-            $scope.categories = Interest.interest.query();
-            var travels = Interest.travel.query(function(){
-                uiGmapGoogleMapApi.then(function(maps) {
-                    self.maps = maps;
-                    self.displayTravels(travels);
-                });
-            });
             $scope.map = {
                 center: { latitude: 48.8566, longitude: 2.35222 },
                 zoom: 7,
@@ -58,10 +42,20 @@
                     streetViewControl: false,
                     mapTypeControl: false
                 },
-                bounds: false,
-                loaded: false,
+                events: {
+                    zoom_changed: function(){$scope.map.zoomChanged = true;},
+                    idle: function(){$scope.map.zoomChanged = false;}
+                },
+                control: {},
+                bounds: {},
                 zoomChanged: false
             };
+            var travels = Interest.travel.query(function(){
+                uiGmapGoogleMapApi.then(function(maps) {
+                    self.initGMaps(maps, travels);
+                });
+            });
+            $scope.categories = Interest.interest.query();
         };    
 
         self.init();

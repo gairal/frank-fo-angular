@@ -1,24 +1,25 @@
-<ui-gmap-google-map center="map.center" 
+<ui-gmap-google-map 
+    class="map-canvas" 
+    center="map.center" 
     zoom="map.zoom" 
     bounds="map.bounds" 
-    class="map-canvas" 
     options="map.options"
     dragging="map.zoomChanged"
-    ui-event="{,
-    'map-zoom_changed': 'map.zoomChanged = true',
-    'map-idle': 'mapIdle()'}"></ui-gmap-google-map>
+    control="map.control"
+    events="map.events"></ui-gmap-google-map>
 <md-input-container>
-    <input type="search" ng-model="q" placeholder="filter skills..." />
+    <label>{{'interest.filter_placeholder' | translate}}</label>
+    <input type="search" ng-model="q" />
 </md-input-container>
 <md-list>
-    <md-subheader class="md-no-sticky" ng-repeat-start="cat in categories">{{cat.name}}</md-subheader>
-    <md-list-item class="md-2-line" ng-repeat="skill in cat.skills | filter:q as resultSkills" ng-repeat-end>
+    <md-subheader class="md-no-sticky" ng-repeat-start="cat in categories | filter:q as resultCats">{{cat.name}}</md-subheader>
+    <md-list-item ng-repeat="interest in cat.interests | filter:q as resultInterests" ng-repeat-end>
         <div class="md-list-item-text" layout="column">
-          <h3>{{interest.name}}</h3>
-          <h4>{{interest.description}}</h4>
+          <h5>{{interest.name}} <span ng-if="interest.description"> | {{interest.description}}</span></h5>
         </div>
     </md-list-item>
 </md-list>
+<md-divider></md-divider>
 <md-subheader>Motivation</md-subheader>
 <md-card layout-padding>
     <p>
@@ -37,11 +38,11 @@
     </p>
     <p>
         Nowadays, my technical background allows me to understand effectively most of environment problematics, to be reactive in any situations, and to absorb easily any new knowledge. On the other hand, three years as a project leader, increased my capacity to be organised, precise, adaptable and independent.<br>
-        <span>For more details on my professional background, please visit the <a href="/experience">experience section</a>.<span>
+        <span>For more details on my professional background, please visit the <a ui-sref="experience">experience section</a>.<span>
     </span></span></p>
     <br>
     <p>
-        Furthermore, I've always been attracted by other countries and cultures. As my passion for <a href="/interests">travel</a> attests, I'm constantly looking for new experiences and to discover new places and people. My goal for the next 10 years is to settle in Asia in order to establish an international career. I'm particularly attracted to Southeast Asia, more specifically Vietnam. If I were given the opportunity to work in Vietnam, I would learn Vietnamese as soon as I am established in the country in order to be integrated into the population as fully as possible. During this period I'd like to discover new technical skills, continue to develop my abilities, be responsible of one or more products, and lead a team of engineers.
+        Furthermore, I've always been attracted by other countries and cultures. As my passion for <a ui-sref="interest">travel</a> attests, I'm constantly looking for new experiences and to discover new places and people. My goal for the next 10 years is to settle in Asia in order to establish an international career. I'm particularly attracted to Southeast Asia, more specifically Vietnam. If I were given the opportunity to work in Vietnam, I would learn Vietnamese as soon as I am established in the country in order to be integrated into the population as fully as possible. During this period I'd like to discover new technical skills, continue to develop my abilities, be responsible of one or more products, and lead a team of engineers.
     </p>
     <br>
     <p>

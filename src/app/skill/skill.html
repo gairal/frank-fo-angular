@@ -7,7 +7,7 @@
     <md-list-item class="md-2-line" ng-repeat="skill in cat.skills | filter:q as resultSkills">
         <div class="md-list-item-text" layout="column">
             <div layout>
-                <h3>{{skill.name}}<span ng-if="skill.description"> | {{skill.description}}</span></h3>
+                <h4>{{skill.name}}<span ng-if="skill.description"> | {{skill.description}}</span></h4>
             </div>
           <md-progress-linear ng-if="skill.level" md-mode="determinate" value="{{skill.level}}"></md-progress-linear>
         </div>

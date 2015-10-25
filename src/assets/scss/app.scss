@@ -17,17 +17,10 @@ md-list{
     &.list-button-left {
     md-list-item{
       min-height: 32px;
-      .md-button {
+      .md-button.md-button-left {
         color: inherit;
         font-weight: bold;
         text-align: left;
-        md-icon {
-          vertical-align: middle;
-          display: inline-block;
-          width: 32px;
-          height: 32px;
-          font-size: 32px;
-        }
       }
     }
   }
@@ -41,7 +34,7 @@ md-toolbar h1 {
     Specific Code
 =================================== */
 .angular-google-map-container { height: 400px; }
-.md-button.md-mini {
+.md-button.fk-mini {
   min-height: 20px;
   line-height: 20px;
   font-size: 10px;
