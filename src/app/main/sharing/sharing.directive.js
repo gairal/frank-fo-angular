@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module('@@appName')
-    .directive('gplus',[function (){
+    .directive('fkGplus',[function (){
         return {
             restrict: 'A',
             link: function(scope,element,attr){
@@ -15,7 +15,7 @@
             }
         };
     }])
-    .directive('fb',[function (){
+    .directive('fkFb',[function (){
         return {
             restrict: 'A',
             link: function(scope,element,attr){

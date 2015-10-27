@@ -1,6 +1,6 @@
 <md-list>
     <md-list-item ng-repeat="exp in experiences" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization" ng-click="openSkills(exp.skills, $event);">
-        <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{exp.image.path}}{{exp.image.name}}" alt="{{exp.name}}">
+        <img class="md-avatar" ng-src="{{ $root.imgHost + exp.image.path + exp.image.name}}" alt="{{exp.name}}">
         <div class="md-list-item-text">
             <h3>{{exp.name}} | {{exp.title}}</h3>
             <div layout layout-sm="column">

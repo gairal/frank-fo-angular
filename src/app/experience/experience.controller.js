@@ -1,8 +1,8 @@
 (function() {
     'use strict';
     angular.module('@@appName')
-        .controller('ExperienceController', ['$scope', '$mdDialog', 'Experience',
-        function( $scope, $mdDialog, Experience ) {
+        .controller('ExperienceController', ['$rootScope', '$scope', '$mdDialog', 'Experience',
+        function($rootScope, $scope, $mdDialog, Experience ) {
             var self = this;
 
             $scope.openSkills =  function(skills, e) {

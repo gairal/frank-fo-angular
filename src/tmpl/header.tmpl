@@ -148,4 +148,5 @@
                 </md-button>
                 <h1 data-ng-bind="title"></h1>
             </md-toolbar>
-            <md-content id="content">
+            <fk-loader ng-show="visibleLoading"></fk-loader>
+            <md-content id="content" ng-hide="visibleLoading">

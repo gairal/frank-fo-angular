@@ -1,6 +1,6 @@
 <md-list>
     <md-list-item ng-repeat="edu in educations" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization">
-        <img class="md-avatar" ng-src="{{ $root.imgHost }}/{{edu.image.path + edu.image.name}}" alt="{{edu.name}}">
+        <img class="md-avatar" ng-src="{{ $root.imgHost + edu.image.path + edu.image.name}}" alt="{{edu.name}}">
         <div class="md-list-item-text">
             <h3>{{edu.name}} | {{edu.short_description}}</h3>
             <div layout layout-sm="column">

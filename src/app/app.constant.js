@@ -25,7 +25,7 @@
             }
         },
         STATIC: {
-            BASEURL: '@@staticUrl'
+            BASEURL: '@@staticUrl/'
         },
         GMAPS: {
             API_KEY: 'TODO'
