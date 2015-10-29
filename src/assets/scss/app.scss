@@ -30,6 +30,8 @@ md-toolbar h1 {
   margin: auto;
 }
 
+iframe[id^="oauth2relay"] { position: fixed !important; }
+
 /* ==============================
     Specific Code
 =================================== */
@@ -39,15 +41,6 @@ md-toolbar h1 {
   line-height: 20px;
   font-size: 10px;
 }
-
-/**TO BE REMOVED **/
-// .logo {
-//     box-shadow: 0 0 4px 0 #333;
-//     margin: 4px 2px;
-//     -webkit-filter: grayscale(80%);
-//     filter: grayscale(80%);
-//     border-radius: 50%;
-// }
 
 .spinner{
     background: url(../img/icons/spinner.gif) no-repeat center center;
