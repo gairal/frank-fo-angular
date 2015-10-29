@@ -4,9 +4,6 @@
         <div class="md-list-item-text">
             <h3>{{exp.name}} | {{exp.title}}</h3>
             <div layout layout-sm="column">
-                <md-button class="md-raised fk-mini md-primary md-hue-2" href="{{exp.website}}" target="_blank" itemprop="url">
-                    {{'experience.website' | translate}}
-                </md-button>
                 <md-button class="md-raised fk-mini md-primary md-hue-1">
                     {{exp.date_in | date:'yyyy MMMM'}} - {{(exp.date_out | date:'yyyy MMMM') || "Present"}}
                 </md-button>
@@ -16,5 +13,6 @@
             </div>
             <p>{{exp.description}}</p>
         </div>
+        <md-icon md-font-library="material-icons" ng-click="openWebsite(edu.website)" itemprop="url" class="md-secondary" aria-label="Website">link</md-icon>
     </md-list-item>
 </md-list>

@@ -1,12 +1,14 @@
 var conf = require('../config.json');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
+var historyApiFallback = require('connect-history-api-fallback')
 var browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync:build', function() {
     browserSync.init({
         server: {
-            baseDir: conf.base.build
+            baseDir: conf.base.build,
+            middleware: [ historyApiFallback() ]
         },
         reloadDebounce: 2000
     });
@@ -15,7 +17,7 @@ gulp.task('browser-sync:build', function() {
 gulp.task('browser-sync:compile', function() {
     browserSync.init({
         server: {
-            baseDir: conf.base.build
+            baseDir: conf.base.compile
         },
         reloadDebounce: 2000
     });

@@ -4,7 +4,7 @@
 - Task runner: Gulp
 - CSS Compilator: Sass
 - JS: Angular
-- CSS: Bootstrap/Foundation
+- CSS: Material Design
 
 ###Install
 ####Node/npm
@@ -14,7 +14,7 @@
 
 ####Project
 customize site with the following source files:
-    - `src/**/*.html` for main pages. But these pages will be compiled to insert the partials. And will end in app/
+    - `src/**/*.html` for main pages.
     - `src/tmpl/*.tmpl` for the html templates that will be included in html files
     - `src/assets/sass/*.scss`
     - `src/app/js/*.js`

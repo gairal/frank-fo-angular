@@ -41,9 +41,10 @@
                 }
             };
         }])
-        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$translateProvider', '$mdThemingProvider', '$resourceProvider', 'cfpLoadingBarProvider', 'uiGmapGoogleMapApiProvider', 
-            function ($stateProvider, $urlRouterProvider, $httpProvider, $translateProvider, $mdThemingProvider, $resourceProvider, cfpLoadingBarProvider, uiGmapGoogleMapApiProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$translateProvider', '$mdThemingProvider', '$resourceProvider', 'cfpLoadingBarProvider', 'uiGmapGoogleMapApiProvider', '$locationProvider', 
+            function ($stateProvider, $urlRouterProvider, $httpProvider, $translateProvider, $mdThemingProvider, $resourceProvider, cfpLoadingBarProvider, uiGmapGoogleMapApiProvider, $locationProvider) {
             cfpLoadingBarProvider.includeSpinner = false;
+            $locationProvider.html5Mode(true)
             
             $urlRouterProvider.otherwise('/home');
             $stateProvider
@@ -79,7 +80,7 @@
                 });
 
             $httpProvider.interceptors.push('httpInterceptor');
-            $resourceProvider.defaults.stripTrailingSlashes = true;
+            $resourceProvider.defaults.stripTrailingSlashes = false;
             $mdThemingProvider.theme('default')
               .primaryPalette('blue-grey')
               .accentPalette('indigo');

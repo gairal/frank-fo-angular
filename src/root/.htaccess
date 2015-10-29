@@ -1,3 +1,22 @@
+#To be removed for prod
+AuthUserFile /homez.614/gairal/admin/pwd/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Protected"
+AuthType Basic
+Require valid-user
+
+# Rewrite rules for HTML5 mode
+RewriteEngine on
+
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^ index.html [L]
+
+
 # Apache Server Configs v1.1.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 

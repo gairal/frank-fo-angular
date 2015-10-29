@@ -50,11 +50,11 @@ gulp.task('ftp', function() {
 });
 
 gulp.task('deploy:build', function (cb){
-    src = conf.base.build + '/**/*';
+    src = [conf.base.build + '/**/*', conf.base.build + '/.*'];
     runSequence('build', 'ftp', cb);
 });
 
 gulp.task('deploy:compile', function (cb){
-    src = conf.base.compile + '/**/*';
+    src = [conf.base.compile + '/**/*', conf.base.compile + '/.*'];
     runSequence('compile', 'ftp', cb);
 });

@@ -1,9 +1,13 @@
 (function() {
     'use strict';
     angular.module('@@appName')
-        .controller('ExperienceController', ['$rootScope', '$scope', '$mdDialog', 'Experience',
-        function($rootScope, $scope, $mdDialog, Experience ) {
+        .controller('ExperienceController', ['$scope', '$mdDialog', 'Experience',
+        function($scope, $mdDialog, Experience ) {
             var self = this;
+
+            $scope.openWebsite = function(url){
+                window.open(url, '_blank');
+            }
 
             $scope.openSkills =  function(skills, e) {
                 $mdDialog.show({
