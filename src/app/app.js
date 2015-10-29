@@ -44,7 +44,7 @@
         .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$translateProvider', '$mdThemingProvider', '$resourceProvider', 'cfpLoadingBarProvider', 'uiGmapGoogleMapApiProvider', '$locationProvider', 
             function ($stateProvider, $urlRouterProvider, $httpProvider, $translateProvider, $mdThemingProvider, $resourceProvider, cfpLoadingBarProvider, uiGmapGoogleMapApiProvider, $locationProvider) {
             cfpLoadingBarProvider.includeSpinner = false;
-            $locationProvider.html5Mode(true)
+            $locationProvider.html5Mode(true);
             
             $urlRouterProvider.otherwise('/home');
             $stateProvider

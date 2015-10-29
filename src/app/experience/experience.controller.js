@@ -7,7 +7,7 @@
 
             $scope.openWebsite = function(url){
                 window.open(url, '_blank');
-            }
+            };
 
             $scope.openSkills =  function(skills, e) {
                 $mdDialog.show({
