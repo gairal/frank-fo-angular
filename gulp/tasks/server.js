@@ -1,7 +1,7 @@
 var conf = require('../config.json');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var historyApiFallback = require('connect-history-api-fallback')
+var historyApiFallback = require('connect-history-api-fallback');
 var browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync:build', function() {
