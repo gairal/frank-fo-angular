@@ -1,6 +1,6 @@
 {
   "name": "gairalFrankApp",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Front-Office for frank.gairal.com in Angular",
   "main": "gruntfile.js",
   "author": "Frank Gairal",
