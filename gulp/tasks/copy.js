@@ -11,7 +11,7 @@ gulp.task('copy:i18n', function () {
 gulp.task('copy:build', function () {
     //Root files
     gulp.src([
-            conf.base.src + conf.path.root + conf.files.root, 
+            conf.base.src + conf.path.root + conf.files.root,
             conf.base.src + conf.path.root + conf.files.hidden
         ])
         .pipe(gulp.dest(conf.base.build));
@@ -31,8 +31,6 @@ gulp.task('copy:build', function () {
     //Scripts
     gulp.src(conf.vendor.js, {base: './'})
         .pipe(gulp.dest(conf.base.build));
-    gulp.src(conf.vendor.css, {base: './'})
-        .pipe(gulp.dest(conf.base.build));
     return gulp.src(conf.vendor.assets, {base: './'})
         .pipe(gulp.dest(conf.base.build));
 });
@@ -40,7 +38,7 @@ gulp.task('copy:build', function () {
 gulp.task('copy:compile', function () {
     //Root files
     gulp.src([
-            conf.base.src + conf.path.root + conf.files.root, 
+            conf.base.src + conf.path.root + conf.files.root,
             conf.base.src + conf.path.root + conf.files.hidden
         ])
         .pipe(gulp.dest(conf.base.compile));

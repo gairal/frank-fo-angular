@@ -2,8 +2,14 @@ var conf = require('../config.json');
 var pkg = require('../../package.json');
 var gulp = require('gulp');
 var replace = require('gulp-replace');
-var jshint = require('gulp-jshint');
 var minimist = require('minimist');
+var eslint = require('gulp-eslint');
+const runSequence = require('run-sequence');
+
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
 
 var knownOptions = {
   string: 'env',
@@ -31,14 +37,26 @@ switch(options.env) {
         break;
 }
 
-gulp.task('js:build', function() {
-  gulp.src([conf.base.src + conf.files.js])
-    .pipe(replace('@@env', options.env))
-    .pipe(replace('@@appName', pkg.name))
-    .pipe(replace('@@appVersion', pkg.version))
-    .pipe(replace('@@apiUrl', apiUrl))
-    .pipe(replace('@@staticUrl', staticUrl))
-    .pipe(jshint('./gulp/.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest(conf.base.build));
+gulp.task('js:lint', function() {
+  'use strict';
+  return gulp.src([conf.base.src + conf.files.js])
+    .pipe(eslint({configFile: './.eslintrc.json'}))
+    .pipe(eslint.format());
+});
+
+gulp.task('js:build', function(cb) {
+  'use strict';
+  return runSequence(['js:lint', 'js:any:build'], cb);
+});
+
+gulp.task('js:any:build', function() {
+  'use strict';
+  return gulp.src([conf.base.src + conf.files.js])
+  .pipe(replace('@@env', options.env))
+  .pipe(replace('@@appName', pkg.name))
+  .pipe(replace('@@appVersion', pkg.version))
+  .pipe(replace('@@apiUrl', apiUrl))
+  .pipe(replace('@@staticUrl', staticUrl))
+  .on('error', handleError)
+  .pipe(gulp.dest(conf.base.build));
 });

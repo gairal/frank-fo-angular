@@ -1,54 +1,69 @@
-@import 'common/_variables';
-@import 'common/_mixins';
+@import 'common/variables';
+@import 'common/mixins';
 
 /* ==============================core=================================== */
-html, body {
-  font-family: 'Roboto', sans-serif;
-  font-size:14px;
-  height:100%;
+html,
+body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 
 /* ==============================
     Core
 =================================== */
-md-list{
-    &.list-button-left {
-    md-list-item{
+md-list {
+  &.list-button-left {
+    md-list-item {
       min-height: 32px;
-      .md-button.md-button-left {
-        color: inherit;
-        font-weight: bold;
-        text-align: left;
+
+      .md-button {
+        &.md-button-left {
+          text-align: left;
+          color: inherit;
+          font-weight: bold;
+        }
       }
     }
   }
 }
 
-md-toolbar h1 {
-  margin: auto;
+md-input-container {
+  display: flex;
 }
 
-iframe[id^="oauth2relay"] { position: fixed !important; }
+md-toolbar {
+  h1 {
+    margin: auto;
+  }
+}
+
+iframe {
+  &[id^='oauth2relay'] { position: fixed !important; } // sass-lint:disable-line no-important
+}
 
 /* ==============================
     Specific Code
 =================================== */
 .angular-google-map-container { height: 400px; }
-.md-button.fk-mini {
-  min-height: 20px;
-  line-height: 20px;
-  font-size: 10px;
+
+.md-button {
+  &.fk-mini {
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+  }
 }
 
-.spinner{
-    background: url(../img/icons/spinner.gif) no-repeat center center;
-    display: block;
-    width:100px;
-    height:100px;
+.spinner {
+  display: block;
+  background: url('../img/icons/spinner.gif') no-repeat center center;
+  width: 100px;
+  height: 100px;
 }
 
-.spinner-hide{
-    visibility: hidden;
+.spinner-hide {
+  visibility: hidden;
 }

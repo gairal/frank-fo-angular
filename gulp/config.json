@@ -35,24 +35,22 @@
     },
     "vendor":{
         "js": [
-            "vendor/lodash/lodash.js",
-            "vendor/angular/angular.js",
-            "vendor/angular-resource/angular-resource.js",
-            "vendor/angular-ui-router/release/angular-ui-router.js",
-            "vendor/angular-animate/angular-animate.js",
-            "vendor/angular-aria/angular-aria.js",
-            "vendor/angular-material/angular-material.js",
-            "vendor/angular-sanitize/angular-sanitize.js",
-            "vendor/angular-translate/angular-translate.js",
-            "vendor/angular-mocks/angular-mocks.js",
-            "vendor/angular-translate-loader-partial/angular-translate-loader-partial.js",
-            "vendor/angular-loading-bar/build/loading-bar.js",
-            "vendor/angular-simple-logger/dist/angular-simple-logger.js",
-            "vendor/angular-google-maps/dist/angular-google-maps.js"
-        ],
-        "css": [
-            "vendor/angular-material/angular-material.css",
-            "vendor/angular-loading-bar/build/loading-bar.css"
+            "node_modules/lodash/lodash.js",
+            "node_modules/angular/angular.js",
+            "node_modules/angular-resource/angular-resource.js",
+            "node_modules/angular-ui-router/release/angular-ui-router.js",
+            "node_modules/angular-animate/angular-animate.js",
+            "node_modules/angular-aria/angular-aria.js",
+            "node_modules/angular-material/angular-material.js",
+            "node_modules/angular-sanitize/angular-sanitize.js",
+            "node_modules/angular-translate/dist/angular-translate.js",
+            "node_modules/angular-mocks/angular-mocks.js",
+            "node_modules/angular-translate-loader-partial/angular-translate-loader-partial.js",
+            "node_modules/angular-loading-bar/build/loading-bar.js",
+            "node_modules/angular-simple-logger/dist/angular-simple-logger.js",
+            "node_modules/angular-google-maps/dist/angular-google-maps.js",
+            "node_modules/angular-material/angular-material.css",
+            "node_modules/angular-loading-bar/build/loading-bar.css"
         ],
         "assets": []
     },
