@@ -1,11 +1,11 @@
 <md-list>
-    <md-list-item ng-repeat="edu in educations" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization" ng-click="openSkills(edu.skills, $event);">
-        <img class="md-avatar" ng-src="{{ $root.imgHost + edu.image.path + edu.image.name}}" alt="{{edu.name}}">
+    <md-list-item ng-repeat="edu in educations" class="md-3-line md-long-text" itemscope="" itemtype="http://data-vocabulary.org/Organization" > <!-- ng-click="openSkills(edu.skills, $event);"> -->
+        <img class="md-avatar" ng-src="{{ $root.imgHost + 'img/' + edu.image.name}}" alt="{{edu.name}}">
         <div class="md-list-item-text">
             <h3>{{edu.name}} | {{edu.short_description}}</h3>
             <div layout layout-sm="column">
                 <md-button class="md-raised fk-mini md-primary md-hue-1">
-                    {{edu.year_in | date:'yyyy'}}-{{edu.year_out | date:'yyyy'}} 
+                    {{edu.year_in | date:'yyyy'}}-{{edu.year_out | date:'yyyy'}}
                 </md-button>
                 <md-button class="md-raised fk-mini md-primary md-hue-3" itemprop="locality">
                     {{edu.place}}

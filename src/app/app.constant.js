@@ -9,16 +9,16 @@
       API: {
         BASEURL: '@@apiUrl',
         EXPERIENCE: {
-          path: '/experiences'
+          path: '/works'
         },
         SKILL: {
-          path: '/skillscat'
+          path: '/skills/categories'
         },
         EDUCATION: {
           path: '/educations'
         },
         INTEREST: {
-          path: '/interestscat'
+          path: '/interests/categories'
         },
         TRAVEL: {
           path: '/travels'
