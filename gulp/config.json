@@ -57,15 +57,15 @@
     "env": {
         "prod": {
             "api_url": "https://api-dot-com-gairal-frank.appspot.com",
-            "static_url": "//static.gairal.com"
+            "static_url": "http://static.gairal.com"
         },
         "dev": {
             "api_url": "https://api-dot-com-gairal-frank.appspot.com",
-            "static_url": "//static.gairal.com"
+            "static_url": "http://static.gairal.com"
         },
         "mock": {
             "api_url": "//localhost:8000",
-            "static_url": "//static.gairal.com"
+            "static_url": "http://static.gairal.com"
         }
     }
 }

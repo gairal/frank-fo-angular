@@ -42,13 +42,13 @@ gulp.task('copy:compile', function () {
             conf.base.src + conf.path.root + conf.files.hidden
         ])
         .pipe(gulp.dest(conf.base.compile));
-    //Fonts + Translations files + images
+    // Fonts + Translations files + images
     gulp.src([
             conf.base.src + conf.path.fonts + conf.files.fonts,
             conf.base.src + conf.path.i18n + conf.files.i18n
         ], {base: './' + conf.base.src})
         .pipe(gulp.dest(conf.base.compile));
-    //Static + mocks + html
+    //Static + mocks
     return gulp.src([
             conf.base.static + conf.files.static,
             conf.base.mocks + conf.files.mocks

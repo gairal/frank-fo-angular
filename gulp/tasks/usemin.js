@@ -6,7 +6,7 @@ var cleanCss = require('gulp-clean-css');
 var rev = require('gulp-rev');
 
 gulp.task('usemin', function() {
-  return gulp.src(conf.base.build + '*.html')
+  return gulp.src(conf.base.build + conf.files.html)
     .pipe(usemin({
       css: [ cleanCss, 'concat', rev ],
       js: [ uglify, rev ]
