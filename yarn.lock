@@ -95,9 +95,9 @@ angular-loading-bar@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/angular-loading-bar/-/angular-loading-bar-0.9.0.tgz#37ef52c25f102c216e7b3cdfd2fc5a5df9628e45"
 
-angular-material@~1.0.0-rc1:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.0.9.tgz#00e816f6381ffd164bc7e56dcf56549f0ff64d6c"
+angular-material@~1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
 
 angular-mocks@~1.4.x:
   version "1.4.14"
