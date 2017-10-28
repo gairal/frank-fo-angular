@@ -67,6 +67,6 @@
     "angular-translate-loader-partial": "~2.8.1",
     "angular-ui-router": "~0.2.15",
     "angular-google-maps": "~2.4.1",
-    "angular-loading-bar": "~0.8.0"
+    "angular-loading-bar": "~0.9.0"
   }
 }

@@ -25,7 +25,7 @@
           var markers = [];
           for (var i = 0, len = travels.length; i < len; i++) {
             markers.push(new maps.Marker({
-              position: new maps.LatLng(travels[i].latitude, travels[i].longitude),
+              position: new maps.LatLng(travels[i].coordinates.latitude, travels[i].coordinates.longitude),
               title: travels[i].place,
               animation: maps.Animation.DROP
             }));

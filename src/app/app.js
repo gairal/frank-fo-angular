@@ -93,7 +93,8 @@
         $translateProvider.useSanitizeValueStrategy('escaped');
 
         uiGmapGoogleMapApiProvider.configure({
-          v: '3.21'
+          v: '3.30',
+          key: 'AIzaSyALPF75dwSUZIWeAM-eBvMNA4BN3p-cCj4'
         });
       }])
     .run(['$rootScope', '$state', '$translate', '$mdSidenav', 'conf',
