@@ -118,15 +118,17 @@ angular-simple-logger@>=0.0.1:
     angular "^1.2"
     debug "^2.2.0"
 
-angular-translate-loader-partial@~2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/angular-translate-loader-partial/-/angular-translate-loader-partial-2.8.1.tgz#5c2cc754fdd8ae36bcdc0c9fbee117b38d734694"
+angular-translate-loader-partial@~2.15.2:
+  version "2.15.2"
+  resolved "https://registry.yarnpkg.com/angular-translate-loader-partial/-/angular-translate-loader-partial-2.15.2.tgz#a6507d39dca23968cc258097db545be331246644"
   dependencies:
-    angular-translate "~2.8.1"
+    angular-translate "~2.15.2"
 
-angular-translate@~2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/angular-translate/-/angular-translate-2.8.1.tgz#ba997c3557bc850c101a946b5938307c96971234"
+angular-translate@~2.15.2:
+  version "2.15.2"
+  resolved "https://registry.yarnpkg.com/angular-translate/-/angular-translate-2.15.2.tgz#f9a3c2b8d5daeb7d76c9e2c01ff3c3d57fe12b90"
+  dependencies:
+    angular ">=1.2.26 <=1.6"
 
 angular-ui-router@~0.4.3:
   version "0.4.3"
@@ -134,7 +136,7 @@ angular-ui-router@~0.4.3:
   dependencies:
     angular "^1.0.8"
 
-"angular@1.2 - 1.6", angular@^1.0.8, angular@^1.2:
+"angular@1.2 - 1.6", "angular@>=1.2.26 <=1.6", angular@^1.0.8, angular@^1.2:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
 
@@ -1359,18 +1361,6 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-airbnb-base@^11.3.0:
-  version "11.3.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.3.2.tgz#8703b11abe3c88ac7ec2b745b7fdf52e00ae680a"
-  dependencies:
-    eslint-restricted-globals "^0.1.1"
-
-eslint-config-airbnb@~15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-15.1.0.tgz#fd432965a906e30139001ba830f58f73aeddae8e"
-  dependencies:
-    eslint-config-airbnb-base "^11.3.0"
-
 eslint-config-standard@~10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-10.2.1.tgz#c061e4d066f379dc17cd562c64e819b4dd454591"
@@ -1420,10 +1410,6 @@ eslint-plugin-promise@~3.6.0:
 eslint-plugin-standard@~3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-3.0.1.tgz#34d0c915b45edc6f010393c7eef3823b08565cf2"
-
-eslint-restricted-globals@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-restricted-globals/-/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
 
 eslint-scope@^3.7.1:
   version "3.7.1"
