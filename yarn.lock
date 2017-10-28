@@ -66,13 +66,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-animate@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.4.14.tgz#ee4068cafdb7e230026319ec6cb9207aca898038"
+angular-animate@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.6.tgz#6925647b141a040d241bf125040f1a150fcd8a70"
 
-angular-aria@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.4.14.tgz#4c8157181c9f6707314d15c7c2a9cbcbb1eb639e"
+angular-aria@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
 
 angular-google-maps@~2.4.1:
   version "2.4.1"
@@ -87,9 +87,9 @@ angular-google-maps@~2.4.1:
     lodash "3.X - 4.X"
     markerclustererplus "2.1.4"
 
-angular-i18n@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-i18n/-/angular-i18n-1.4.14.tgz#e1497f14a912323ac45850ef42c7389153a4f127"
+angular-i18n@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-i18n/-/angular-i18n-1.6.6.tgz#f21cbf9161a449be4b7140d8b153f6ca9b087d24"
 
 angular-loading-bar@~0.9.0:
   version "0.9.0"
@@ -99,17 +99,17 @@ angular-material@~1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
 
-angular-mocks@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.4.14.tgz#ea12ec70a5227697e79575523abbec0e0f9168a7"
+angular-mocks@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.6.tgz#c93018e7838c6dc5ceaf1a6bcf9be13c830ea515"
 
-angular-resource@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-resource/-/angular-resource-1.4.14.tgz#382a484e2dce25bfbb53583e783f83e5dc5bee64"
+angular-resource@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-resource/-/angular-resource-1.6.6.tgz#430660e969c3e7cf40c5e247e5e690f06d6efc61"
 
-angular-sanitize@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.4.14.tgz#778c4e24941fa982d86cf7ebac3e613fa5d414fc"
+angular-sanitize@~1.6.x:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.6.tgz#0fd065a19931517fbece66596d325d72b6e06041"
 
 angular-simple-logger@>=0.0.1:
   version "0.1.7"
@@ -136,13 +136,9 @@ angular-ui-router@~0.4.3:
   dependencies:
     angular "^1.0.8"
 
-"angular@1.2 - 1.6", "angular@>=1.2.26 <=1.6", angular@^1.0.8, angular@^1.2:
+"angular@1.2 - 1.6", "angular@>=1.2.26 <=1.6", angular@^1.0.8, angular@^1.2, angular@~1.6.x:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
-
-angular@~1.4.x:
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.4.14.tgz#9d0feaf60ce6e52ce50f49ee328656d1e1875c37"
 
 ansi-escapes@^1.1.0:
   version "1.4.0"
