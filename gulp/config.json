@@ -56,11 +56,11 @@
     },
     "env": {
         "prod": {
-            "api_url": "https://api-dot-com-gairal-frank.appspot.com",
+            "api_url": "https://com-gairal-frank-api.appspot.com",
             "static_url": "http://static.gairal.com"
         },
         "dev": {
-            "api_url": "https://api-dot-com-gairal-frank.appspot.com",
+            "api_url": "https://com-gairal-frank-api.appspot.com",
             "static_url": "http://static.gairal.com"
         },
         "mock": {
